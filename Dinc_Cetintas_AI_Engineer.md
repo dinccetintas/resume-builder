@@ -9,15 +9,14 @@ AI Engineer who owns production AI platforms end-to-end — from architecture an
 ## PROFESSIONAL EXPERIENCE
 
 **AI Engineer — Commercial Bank of Qatar, Doha** · Jan 2024 – Present
-- Established reusable AI platform capabilities — shared retrieval, evaluation, document-intelligence, and model-serving components — accelerating delivery of multiple production AI applications across 7+ business teams and 200+ internal users under banking compliance and data-governance controls.
-- Designed the RAG architecture — hybrid retrieval, semantic chunking, reranking, and citation grounding over 900+ compliance documents — delivering explainable, fully traceable, source-linked answers at 87% retrieval accuracy.
-- Defined architectural, evaluation, and release standards for the production AI systems I built — automated quality benchmarks (retrieval quality, grounding, hallucination mitigation), human review loops, and auditability enforced before every deployment.
-- Built an AI email & inquiry assistant that auto-classifies and drafts responses to 500+ requests/week using LLM reasoning and structured outputs, cutting manual workload 70% and earning the COO Problem Solver Award.
-- Developed production AI workflows for credit-risk and financial analysis, combining retrieval, tool calling, and LLM reasoning to generate structured, analyst-ready reports.
-- Engineered an OCR & document-intelligence pipeline (7 extraction flows) for complex Arabic/English identity and financial documents, accelerating document handling ~65% with full traceability.
-- Built and owned the FastAPI / REST services and model-serving layer (Docker, Kubernetes, MLflow) with production monitoring and observability, cutting inference latency ~40% and ensuring reliability.
+- Built a reusable AI platform — a shared retrieval/embeddings service, a shared evaluation framework, and a common model-serving API — that multiple teams consumed to ship production AI applications across 7+ business teams and 200+ users, cutting time-to-delivery for each new app.
+- Chose hybrid retrieval (BM25 + vector) with reranking after semantic-only search missed exact regulatory and financial terminology, surfacing authoritative, citation-grounded passages for compliance and reaching 87% source-linked retrieval accuracy over 900+ documents.
+- Eliminated unsupported model outputs caught in pre-release testing via citation-grounded generation and retrieval-quality gates, then added post-deployment monitoring and feedback loops that detect retrieval regressions and hallucinations and feed them back into evaluation.
+- Defined architectural, evaluation, and release standards for the production AI I built — automated benchmarks (retrieval quality, grounding, hallucination), schema-validated structured outputs, prompt versioning, human review loops, and auditability enforced before every deployment.
+- Owned the FastAPI/REST serving layer with model routing, fallback strategies, and context engineering (context-window budgeting and compaction for long documents), cutting inference latency ~40% through optimized retrieval and containerized serving (Docker, Kubernetes, MLflow) with production monitoring.
+- Developed production AI workflows for credit-risk and financial analysis that retrieve source data, call internal tools, reason with an LLM, and validate every output against a JSON schema to produce structured, analyst-ready reports.
+- Built an AI email & inquiry assistant handling 500+ requests/week with schema-validated structured outputs, cutting manual workload 70% and earning the COO Problem Solver Award.
 - Designed and deployed a real-time fraud-detection service integrating engineered risk features, model evaluation, and monitoring, achieving ROC-AUC 0.93 while strengthening transaction-risk controls.
-- Delivered an on-prem Arabic↔English document-translation platform that preserves layout and keeps sensitive data fully in-house, eliminating ~$120K/yr in third-party translation spend.
 - Partnered with risk, compliance, and business stakeholders to define requirements, align on success metrics, and drive adoption of production AI systems across multiple teams.
 
 **Software Engineer — MeeApps, İstanbul** · Feb 2023 – Jan 2024
@@ -35,8 +34,8 @@ AI Engineer who owns production AI platforms end-to-end — from architecture an
 **Exchange Semester, Electrical & Electronics Engineering — Universitat Politècnica de València (UPV), Spain** · 2022  
 
 ## TECHNICAL SKILLS
-- **AI Systems / GenAI:** LLM systems, RAG (hybrid retrieval, reranking, citation grounding), agentic workflows, tool / function calling, prompt & context engineering, structured outputs
-- **AI Engineering / LLMOps:** Automated evaluation (retrieval quality, grounding, hallucination mitigation), human review loops, observability & logging, latency optimization, reliability engineering
+- **AI Systems / GenAI:** LLM systems, RAG (hybrid BM25+vector, reranking, citation grounding), tool / function calling, structured outputs & JSON-schema validation, prompt versioning, context engineering, agentic workflows
+- **AI Engineering / LLMOps:** Automated evaluation (retrieval quality, grounding, hallucination mitigation), human review loops, monitoring & feedback loops, model routing & fallback strategies, latency optimization, reliability engineering
 - **Regulated AI:** Auditability, traceability, explainability, compliance & release governance
 - **Production / Platform:** FastAPI / REST APIs, backend & service architecture, model serving, Docker, Kubernetes, MLflow, monitoring
 - **ML Foundations:** Supervised & unsupervised learning, feature engineering, time-series forecasting, A/B testing
@@ -47,8 +46,8 @@ AI Engineer who owns production AI platforms end-to-end — from architecture an
 - **AI Email / Inquiry Assistant** — 500+ requests/week automated; 70% manual-load reduction
 - **Credit Risk Report Generation Platform** — agentic generation of analyst-ready credit-risk reports
 - **Financial Analysis Agent Workflows** — multi-step LLM reasoning + tool calling over financial data
-- **OCR & Document Intelligence Platform** — 7 extraction pipelines for Arabic/English ID & financial docs
-- **Arabic↔English Translation Platform** — on-prem, layout-preserving; ~$120K/yr third-party spend eliminated
+- **OCR & Document Intelligence Platform** — 7 extraction flows for Arabic/English ID & financial docs; ~65% faster, traceable
+- **Arabic↔English Translation Platform** — on-prem, layout-preserving, data-resident; ~$120K/yr third-party spend eliminated
 
 ## CERTIFICATIONS & COURSES
 Operationalizing LLMs on Azure (Duke) · Generative AI Applications with RAG & LangChain (IBM) · AI Agents (IBM) · Generative AI Techniques & Applications (Duke) · Machine Learning Specialization (Stanford) · TensorFlow in AI/ML/DL (DeepLearning.AI) · Deep Learning for Sequences & Time Series (DeepLearning.AI) · Visa Data Science Bootcamp

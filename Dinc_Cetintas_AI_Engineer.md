@@ -1,7 +1,7 @@
 # DINC CETINTAS
 **AI Engineer**
 
-EU Citizen — no visa sponsorship required  ·  Cyprus  ·  dinccetintas24@gmail.com  ·  +974 51444964  ·  linkedin.com/in/dinc-cetintas-79a04b205  ·  GitHub
+EU Citizen, Cyprus · [dinccetintas24@gmail.com](mailto:dinccetintas24@gmail.com) · +974 51444964 · [LinkedIn](https://www.linkedin.com/in/dinc-cetintas-79a04b205/) · [GitHub](https://github.com/dinccetintas)
 
 ## PROFILE
 AI Engineer who owns production AI platforms end-to-end — from architecture and evaluation to deployment, observability, and continuous improvement — in regulated financial environments. I ship reliable, auditable, low-latency LLM and RAG systems used across 7+ business teams and 200+ internal users, combining software engineering, MLOps, and GenAI to turn mission-critical banking workflows into measurable gains in cost, speed, and risk reduction.
@@ -53,4 +53,4 @@ AI Engineer who owns production AI platforms end-to-end — from architecture an
 Operationalizing LLMs on Azure (Duke) · Generative AI Applications with RAG & LangChain (IBM) · AI Agents (IBM) · Generative AI Techniques & Applications (Duke) · Machine Learning Specialization (Stanford) · TensorFlow in AI/ML/DL (DeepLearning.AI) · Deep Learning for Sequences & Time Series (DeepLearning.AI) · Visa Data Science Bootcamp
 
 ## ADDITIONAL
-Languages: English  ·  Links: LinkedIn, GitHub
+Languages: English (professional)

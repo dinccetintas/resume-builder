@@ -10,7 +10,10 @@ from __future__ import annotations
 import os
 
 from docx import Document
-from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_TAB_ALIGNMENT
+from docx.opc.constants import RELATIONSHIP_TYPE as RT
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
 from docx.shared import Pt, RGBColor
 from fpdf import FPDF
 
@@ -21,11 +24,18 @@ BASENAME = "Dinc_Cetintas_AI_Engineer"
 
 NAME = "DINC CETINTAS"
 ROLE = "AI Engineer"
-CONTACT = (
-    "EU Citizen — no visa sponsorship required  ·  Cyprus  ·  "
-    "dinccetintas24@gmail.com  ·  +974 51444964  ·  "
-    "linkedin.com/in/dinc-cetintas-79a04b205  ·  GitHub"
-)
+EMAIL = "dinccetintas24@gmail.com"
+PHONE = "+974 51444964"
+LINKEDIN_URL = "https://www.linkedin.com/in/dinc-cetintas-79a04b205/"
+GITHUB_URL = "https://github.com/dinccetintas"
+# (text, link-or-None) — rendered as a centered line; links are clickable.
+CONTACT_SEGMENTS = [
+    ("EU Citizen, Cyprus", None),
+    (EMAIL, "mailto:" + EMAIL),
+    (PHONE, None),
+    ("LinkedIn", LINKEDIN_URL),
+    ("GitHub", GITHUB_URL),
+]
 
 PROFILE = (
     "AI Engineer who owns production AI platforms end-to-end — from architecture and evaluation "
@@ -135,7 +145,56 @@ COURSES = (
     "Learning for Sequences & Time Series (DeepLearning.AI) · Visa Data Science Bootcamp"
 )
 
-ADDITIONAL = "Languages: English  ·  Links: LinkedIn, GitHub"
+ADDITIONAL = "Languages: English (professional)"
+
+
+# --- DOCX helpers -----------------------------------------------------------
+
+NAVY_HEX = "1F3A5F"
+INK_HEX = "1A1A1A"
+MUTED_HEX = "565656"
+
+
+def _set_char_spacing(run, pts: float) -> None:
+    """Letter-spacing in points (w:spacing val is in twentieths of a point)."""
+    rpr = run._element.get_or_add_rPr()
+    spacing = OxmlElement("w:spacing")
+    spacing.set(qn("w:val"), str(int(pts * 20)))
+    rpr.append(spacing)
+
+
+def _add_bottom_border(paragraph, color: str = NAVY_HEX, sz: int = 6, space: int = 3) -> None:
+    ppr = paragraph._p.get_or_add_pPr()
+    pbdr = OxmlElement("w:pBdr")
+    bottom = OxmlElement("w:bottom")
+    bottom.set(qn("w:val"), "single")
+    bottom.set(qn("w:sz"), str(sz))
+    bottom.set(qn("w:space"), str(space))
+    bottom.set(qn("w:color"), color)
+    pbdr.append(bottom)
+    ppr.append(pbdr)
+
+
+def _add_hyperlink(paragraph, text: str, url: str, *, size: float = 8.5,
+                   color: str = NAVY_HEX) -> None:
+    r_id = paragraph.part.relate_to(url, RT.HYPERLINK, is_external=True)
+    link = OxmlElement("w:hyperlink")
+    link.set(qn("r:id"), r_id)
+    run = OxmlElement("w:r")
+    rpr = OxmlElement("w:rPr")
+    col = OxmlElement("w:color")
+    col.set(qn("w:val"), color)
+    rpr.append(col)
+    szel = OxmlElement("w:sz")
+    szel.set(qn("w:val"), str(int(size * 2)))
+    rpr.append(szel)
+    run.append(rpr)
+    t = OxmlElement("w:t")
+    t.set(qn("xml:space"), "preserve")
+    t.text = text
+    run.append(t)
+    link.append(run)
+    paragraph._p.append(link)
 
 
 # --- DOCX renderer ----------------------------------------------------------
@@ -146,45 +205,63 @@ def build_docx(path: str) -> None:
     style.font.name = "Calibri"
     style.font.size = Pt(10.5)
 
-    for section in doc.sections:
-        section.top_margin = section.bottom_margin = Pt(40)
-        section.left_margin = section.right_margin = Pt(50)
+    sec = doc.sections[0]
+    sec.top_margin = sec.bottom_margin = Pt(38)
+    sec.left_margin = sec.right_margin = Pt(54)
+    right_pos = sec.page_width - sec.left_margin - sec.right_margin
 
     def heading(text: str) -> None:
         p = doc.add_paragraph()
-        p.space_before = Pt(8)
         run = p.add_run(text.upper())
         run.bold = True
-        run.font.size = Pt(11)
+        run.font.size = Pt(10.5)
+        run.font.name = "Calibri"
         run.font.color.rgb = RGBColor(0x1F, 0x3A, 0x5F)
-        p.paragraph_format.space_before = Pt(10)
-        p.paragraph_format.space_after = Pt(2)
+        _set_char_spacing(run, 1.2)
+        p.paragraph_format.space_before = Pt(11)
+        p.paragraph_format.space_after = Pt(4)
+        _add_bottom_border(p)
 
     def bullet(text: str) -> None:
         p = doc.add_paragraph(style="List Bullet")
         p.paragraph_format.space_after = Pt(3)
         p.add_run(text)
 
-    # Header
+    # Header — serif name, spaced uppercase role, clickable contact line + rule
     name_p = doc.add_paragraph()
     name_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     r = name_p.add_run(NAME)
     r.bold = True
-    r.font.size = Pt(20)
-    name_p.paragraph_format.space_after = Pt(0)
+    r.font.size = Pt(24)
+    r.font.name = "Georgia"
+    r.font.color.rgb = RGBColor(0x1A, 0x1A, 0x1A)
+    _set_char_spacing(r, 1.0)
+    name_p.paragraph_format.space_after = Pt(1)
 
     role_p = doc.add_paragraph()
     role_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    rr = role_p.add_run(ROLE)
-    rr.font.size = Pt(12)
+    rr = role_p.add_run(ROLE.upper())
+    rr.font.size = Pt(11)
     rr.font.color.rgb = RGBColor(0x1F, 0x3A, 0x5F)
-    role_p.paragraph_format.space_after = Pt(2)
+    _set_char_spacing(rr, 2.4)
+    role_p.paragraph_format.space_after = Pt(3)
 
     contact_p = doc.add_paragraph()
     contact_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    cr = contact_p.add_run(CONTACT)
-    cr.font.size = Pt(8.5)
-    contact_p.paragraph_format.space_after = Pt(4)
+    sep = "   |   "
+    for i, (text, url) in enumerate(CONTACT_SEGMENTS):
+        if url:
+            _add_hyperlink(contact_p, text, url, size=8.5)
+        else:
+            run = contact_p.add_run(text)
+            run.font.size = Pt(8.5)
+            run.font.color.rgb = RGBColor(0x56, 0x56, 0x56)
+        if i < len(CONTACT_SEGMENTS) - 1:
+            s = contact_p.add_run(sep)
+            s.font.size = Pt(8.5)
+            s.font.color.rgb = RGBColor(0xAA, 0xAA, 0xAA)
+    contact_p.paragraph_format.space_after = Pt(9)
+    _add_bottom_border(contact_p, sz=4, space=4)
 
     # Profile
     heading("Profile")
@@ -194,8 +271,9 @@ def build_docx(path: str) -> None:
     heading("Professional Experience")
     for job in EXPERIENCE:
         jp = doc.add_paragraph()
-        jp.paragraph_format.space_before = Pt(6)
+        jp.paragraph_format.space_before = Pt(7)
         jp.paragraph_format.space_after = Pt(1)
+        jp.paragraph_format.tab_stops.add_tab_stop(right_pos, WD_TAB_ALIGNMENT.RIGHT)
         tr = jp.add_run(job["title"])
         tr.bold = True
         tr.font.size = Pt(10.5)
@@ -203,6 +281,7 @@ def build_docx(path: str) -> None:
         dr = jp.add_run(job["dates"])
         dr.italic = True
         dr.font.size = Pt(9.5)
+        dr.font.color.rgb = RGBColor(0x56, 0x56, 0x56)
         for b in job["bullets"]:
             bullet(b)
 
@@ -258,16 +337,40 @@ def build_pdf(path: str) -> None:
     pdf.set_margins(left=16, top=14, right=16)
     width = pdf.w - 32
 
-    def name_block() -> None:
-        pdf.set_font("Helvetica", "B", 22)
-        pdf.cell(0, 9, NAME, align="C", new_x="LMARGIN", new_y="NEXT")
-        pdf.set_text_color(*NAVY)
-        pdf.set_font("Helvetica", "", 12)
-        pdf.cell(0, 6, ROLE, align="C", new_x="LMARGIN", new_y="NEXT")
+    def render_contact_line(size: float = 8.5) -> None:
+        pdf.set_font("Helvetica", "", size)
+        sep = "   |   "
+        sep_w = pdf.get_string_width(sep)
+        widths = [pdf.get_string_width(latin(t)) for t, _ in CONTACT_SEGMENTS]
+        total = sum(widths) + sep_w * (len(CONTACT_SEGMENTS) - 1)
+        pdf.set_x((pdf.w - total) / 2)
+        for i, (text, url) in enumerate(CONTACT_SEGMENTS):
+            if url:
+                pdf.set_text_color(*NAVY)
+                pdf.cell(widths[i], 5, latin(text), link=url)
+            else:
+                pdf.set_text_color(0x56, 0x56, 0x56)
+                pdf.cell(widths[i], 5, latin(text))
+            if i < len(CONTACT_SEGMENTS) - 1:
+                pdf.set_text_color(0xAA, 0xAA, 0xAA)
+                pdf.cell(sep_w, 5, sep)
         pdf.set_text_color(0, 0, 0)
-        pdf.set_font("Helvetica", "", 8)
-        pdf.multi_cell(0, 4, latin(CONTACT), align="C")
-        pdf.ln(1.5)
+        pdf.ln(6)
+
+    def name_block() -> None:
+        pdf.set_font("Times", "B", 24)
+        pdf.set_text_color(0x1A, 0x1A, 0x1A)
+        pdf.cell(0, 10, latin(NAME), align="C", new_x="LMARGIN", new_y="NEXT")
+        pdf.set_text_color(*NAVY)
+        pdf.set_font("Helvetica", "", 10.5)
+        pdf.cell(0, 6, latin(ROLE.upper()), align="C", new_x="LMARGIN", new_y="NEXT")
+        pdf.set_text_color(0, 0, 0)
+        render_contact_line()
+        y = pdf.get_y() + 0.5
+        pdf.set_draw_color(*NAVY)
+        pdf.set_line_width(0.4)
+        pdf.line(16, y, 16 + width, y)
+        pdf.ln(3)
 
     def heading(text: str) -> None:
         pdf.ln(1.5)
@@ -361,7 +464,8 @@ def latin(s: str) -> str:
 # --- Markdown source --------------------------------------------------------
 
 def build_md(path: str) -> None:
-    lines = [f"# {NAME}", f"**{ROLE}**", "", CONTACT, "", "## PROFILE", PROFILE, "",
+    contact = " · ".join(f"[{t}]({u})" if u else t for t, u in CONTACT_SEGMENTS)
+    lines = [f"# {NAME}", f"**{ROLE}**", "", contact, "", "## PROFILE", PROFILE, "",
              "## PROFESSIONAL EXPERIENCE"]
     for job in EXPERIENCE:
         lines += ["", f"**{job['title']}** · {job['dates']}"]

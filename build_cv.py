@@ -28,70 +28,71 @@ CONTACT = (
 )
 
 PROFILE = (
-    "AI Engineer specializing in Large Language Models, Generative AI, and production ML "
-    "systems. I design, fine-tune, and deploy transformer-based models (GPT, T5, BERT) and "
-    "RAG pipelines for business-critical use cases — document intelligence, conversational "
-    "assistants, and workflow automation. Proven track record of shipping AI to production "
-    "with MLOps (Docker, Kubernetes, MLflow) and optimizing models for real-time, low-latency "
-    "inference. Strong bias for action and a record of AI solutions that drive measurable "
-    "business impact."
+    "AI Engineer who designs, builds, deploys, evaluates, and scales production AI systems in "
+    "regulated financial environments. I own LLM and RAG platforms end-to-end — architecture, "
+    "evaluation, agentic orchestration, model serving, and observability — delivering reliable, "
+    "auditable, low-latency products used by real business teams. I combine software "
+    "engineering, MLOps, and GenAI to turn mission-critical banking workflows into measurable "
+    "gains in cost, speed, and risk reduction."
 )
 
 EXPERIENCE = [
     {
-        "title": "AI Engineer / Data Scientist — Commercial Bank of Qatar, Doha",
+        "title": "AI Engineer — Commercial Bank of Qatar, Doha",
         "dates": "Jan 2024 – Present",
         "bullets": [
-            "Shipped production LLM systems (GPT, T5, BERT) for personalization, document "
-            "summarization, and workflow automation, cutting manual processing across multiple "
-            "business units by ~60%, by fine-tuning transformer models with Hugging Face "
-            "Transformers and orchestrating them through LangChain.",
-            "Delivered real-time answers from 900+ unstructured compliance documents at 87% "
-            "source-linked retrieval accuracy by building a RAG assistant with an embedding + "
-            "vector-retrieval pipeline (semantic chunking, re-ranking, citation grounding).",
-            "Reduced manual workload 70% and earned the COO Problem Solver Award by building a "
-            "generative-AI email assistant that auto-classifies and responds to 500+ customer "
-            "queries weekly (intent classification + LLM-generated drafts).",
-            "Extracted structured data from complex Arabic/English ID and financial documents "
-            "— cutting document-handling time ~65% — by building 7 OCR + translation "
-            "pipelines on Azure OCR and transformer models.",
-            "Flagged anomalous transactions and reduced fraud exposure by developing a "
-            "supervised fraud-detection model (XGBoost, Logistic Regression) with advanced "
-            "feature engineering, validated via A/B testing and ROC-AUC 0.93, handling severe "
-            "class imbalance with resampling.",
-            "Eliminated third-party translation spend (~$120K/yr) by launching an on-prem "
-            "Arabic↔English document translator that preserves original layout, deployed "
-            "fully in-house for data privacy.",
-            "Cut production inference latency ~40% and enabled reproducible CI/CD model releases "
-            "by containerizing and automating LLM deployment with Docker, MLflow, and Kubernetes.",
+            "Architected and owned production LLM platforms for document intelligence, workflow "
+            "automation, and conversational AI, deployed for multiple business teams across a "
+            "regulated bank.",
+            "Designed a production RAG platform over 900+ compliance documents — hybrid "
+            "retrieval, semantic chunking, reranking, and citation grounding — delivering "
+            "auditable, source-linked answers at 87% retrieval accuracy.",
+            "Built automated evaluation pipelines measuring retrieval quality, grounding, and "
+            "hallucination rate, with human review loops, gating every release on quality "
+            "thresholds before production.",
+            "Productionized agentic workflows orchestrating LLM reasoning, tool calling, OCR, "
+            "and structured outputs to automate 500+ customer inquiries weekly — reducing "
+            "manual workload 70% and earning the COO Problem Solver Award.",
+            "Engineered 7 OCR + document-extraction pipelines for complex Arabic/English "
+            "identity and financial documents, accelerating document handling ~65% while "
+            "preserving traceability and data privacy.",
+            "Deployed a real-time fraud-detection system with engineered risk features and "
+            "rigorous evaluation (A/B testing, ROC-AUC 0.93), flagging anomalous transactions "
+            "and hardening the bank's risk controls.",
+            "Eliminated ~$120K/yr in third-party translation spend by building an on-prem "
+            "Arabic↔English document translator that preserves layout and keeps sensitive "
+            "data fully in-house.",
+            "Owned end-to-end MLOps and observability — containerized model serving (Docker, "
+            "Kubernetes, MLflow), CI/CD, monitoring, guardrails, caching, and model routing — "
+            "cutting inference latency ~40% and ensuring production reliability.",
         ],
     },
     {
         "title": "Software Engineer — MeeApps, İstanbul",
         "dates": "Feb 2023 – Jan 2024",
         "bullets": [
-            "Delivered microsecond-level trade execution for 23 brokerage firms managing $10M+ "
-            "portfolios by building a high-frequency trading platform and optimizing ITCH, OUCH, "
-            "and TCP protocols for ultra-low latency.",
-            "Built the full platform — frontend UI, backend services, and live market-data "
-            "feeds from co-located exchange servers — using React, C#, and C++.",
-            "Owned end-to-end system reliability and latency across the full stack, sustaining "
-            "99.9% uptime under live trading load.",
+            "Architected and delivered a high-frequency trading platform for 23 brokerage firms "
+            "managing $10M+ in portfolios, achieving microsecond-level execution by optimizing "
+            "ITCH, OUCH, and TCP protocols for ultra-low latency.",
+            "Built and owned the full production stack — React/C#/C++ frontend, backend "
+            "services, and co-located live market-data feeds — under strict real-time "
+            "reliability constraints.",
+            "Owned end-to-end system performance and reliability, sustaining 99.9% uptime "
+            "under live trading load.",
         ],
     },
     {
-        "title": "Data Scientist — Schneider Electric, İstanbul",
+        "title": "Machine Learning Engineer — Schneider Electric, İstanbul",
         "dates": "Jul 2022 – Dec 2022",
         "bullets": [
-            "Reduced inventory gaps 12–15% during COVID-related supply shocks by developing "
-            "and validating demand-forecasting and stock-out-risk models (Random Forest, XGBoost).",
-            "Improved forecast accuracy by engineering features from sales, supply-chain, and "
-            "distributor data and applying time-series analysis and model tuning.",
-            "Enabled scalable, reproducible deployment by designing evaluation frameworks "
-            "(cross-validation, holdout testing) and building model pipelines.",
-            "Aligned model outputs with logistics and fulfillment planning by partnering with "
-            "stakeholders on success metrics; delivered analysis via SQL, Python (pandas, "
-            "scikit-learn), and Power BI.",
+            "Built and deployed demand-forecasting and stock-out-risk models that reduced "
+            "inventory gaps 12–15% during COVID supply shocks, directly improving fulfillment "
+            "reliability.",
+            "Engineered features from sales, supply-chain, and distributor data and built "
+            "reproducible model pipelines with rigorous evaluation (cross-validation, holdout "
+            "testing) for scalable deployment.",
+            "Partnered with logistics stakeholders to define success metrics and operationalize "
+            "forecasts into fulfillment planning.",
         ],
     },
 ]
@@ -103,23 +104,24 @@ EDUCATION = [
 ]
 
 SKILLS = [
-    ("Generative AI / LLMs", "RAG, fine-tuning, prompt engineering, transformers (GPT, BERT, T5), "
-     "Hugging Face, LangChain, OpenAI APIs, embeddings & vector retrieval"),
-    ("ML / Data Science", "Supervised & unsupervised learning, XGBoost, Random Forest, feature "
-     "engineering, time-series forecasting, statistical analysis & hypothesis testing, A/B "
-     "testing, model evaluation"),
-    ("MLOps & Deployment", "Docker, Kubernetes, MLflow, CI/CD, real-time inference optimization, "
-     "model serving"),
-    ("Cloud", "Azure (OCR, Translation, Custom Models), AWS"),
-    ("Programming", "Python (pandas, scikit-learn), SQL; Full-stack (React, C#, C++)"),
+    ("AI Systems / GenAI", "LLM systems, RAG (hybrid retrieval, reranking, citation grounding), "
+     "agentic & multi-step workflows, tool / function calling, prompt & context engineering, "
+     "AI orchestration, structured outputs"),
+    ("AI Engineering / LLMOps", "Automated evaluation (retrieval quality, grounding, "
+     "hallucination mitigation), human review loops, benchmarking, observability & logging, "
+     "guardrails, caching, model routing, latency optimization, reliability engineering"),
+    ("Production / Platform", "APIs, model serving, Docker, Kubernetes, MLflow, CI/CD, monitoring"),
+    ("ML Foundations", "Supervised & unsupervised learning, feature engineering, time-series "
+     "forecasting, A/B testing, statistical evaluation"),
+    ("Cloud & Data", "Azure (OCR, Translation, Custom Models), AWS, SQL"),
+    ("Programming", "Python; full-stack (React, C#, C++)"),
 ]
 
 COURSES = (
-    "Machine Learning Specialization (Stanford) · Visa Data Science Bootcamp · "
-    "TensorFlow in AI/ML/DL (DeepLearning.AI) · Operationalizing LLMs on Azure (Duke) · "
-    "Generative AI Applications with RAG & LangChain (IBM) · AI Agents (IBM) · "
-    "Generative AI Techniques & Applications (Duke) · Deep Learning for Sequences & Time "
-    "Series (DeepLearning.AI) · Supervised/Unsupervised Learning with scikit-learn (DataCamp)"
+    "Operationalizing LLMs on Azure (Duke) · Generative AI Applications with RAG & LangChain "
+    "(IBM) · AI Agents (IBM) · Generative AI Techniques & Applications (Duke) · Machine "
+    "Learning Specialization (Stanford) · TensorFlow in AI/ML/DL (DeepLearning.AI) · Deep "
+    "Learning for Sequences & Time Series (DeepLearning.AI) · Visa Data Science Bootcamp"
 )
 
 ADDITIONAL = "Languages: English  ·  Links: LinkedIn, GitHub"

@@ -28,12 +28,12 @@ CONTACT = (
 )
 
 PROFILE = (
-    "AI Engineer who designs, builds, deploys, evaluates, and scales production AI systems in "
-    "regulated financial environments. I own LLM and RAG platforms end-to-end — architecture, "
-    "evaluation, agentic orchestration, APIs, model serving, and observability — delivering "
-    "reliable, auditable, low-latency products used across 7+ business teams and 200+ internal "
-    "users. I combine software engineering, MLOps, and GenAI to turn mission-critical banking "
-    "workflows into measurable gains in cost, speed, and risk reduction."
+    "AI Engineer who owns production AI platforms end-to-end — from architecture and evaluation "
+    "to deployment, observability, and continuous improvement — in regulated financial "
+    "environments. I ship reliable, auditable, low-latency LLM and RAG systems used across 7+ "
+    "business teams and 200+ internal users, combining software engineering, MLOps, and GenAI to "
+    "turn mission-critical banking workflows into measurable gains in cost, speed, and risk "
+    "reduction."
 )
 
 EXPERIENCE = [
@@ -43,13 +43,13 @@ EXPERIENCE = [
         "bullets": [
             "Architected and owned production LLM and RAG platforms for document intelligence, "
             "workflow automation, and conversational AI, deployed across 7+ business teams and "
-            "200+ internal users at a regulated bank.",
+            "200+ internal users under banking compliance and data-governance controls.",
             "Designed the RAG architecture — hybrid retrieval, semantic chunking, reranking, "
-            "and citation grounding over 900+ compliance documents — delivering auditable, "
-            "source-linked answers at 87% retrieval accuracy.",
-            "Built automated evaluation pipelines measuring retrieval quality, grounding, and "
-            "hallucination rate, with human review loops, gating every release on quality "
-            "thresholds before production.",
+            "and citation grounding over 900+ compliance documents — delivering explainable, "
+            "fully traceable, source-linked answers at 87% retrieval accuracy.",
+            "Established evaluation and release governance for production AI — automated quality "
+            "benchmarks (retrieval quality, grounding, hallucination mitigation), human review "
+            "loops, and auditability requirements enforced before every deployment.",
             "Productionized agentic workflows (LLM reasoning, tool calling, OCR, structured "
             "outputs) powering inquiry automation — 500+ requests/week, 70% manual-load "
             "reduction, COO Problem Solver Award — and credit-risk & financial-analysis report "
@@ -57,9 +57,9 @@ EXPERIENCE = [
             "Built and owned the FastAPI / REST services and model-serving layer (Docker, "
             "Kubernetes, MLflow) with production monitoring and observability, cutting inference "
             "latency ~40% and ensuring reliability.",
-            "Designed and deployed a production fraud-detection pipeline combining engineered "
+            "Designed and deployed a real-time fraud-detection service integrating engineered "
             "risk features, model evaluation, and monitoring, achieving ROC-AUC 0.93 while "
-            "strengthening real-time transaction risk controls.",
+            "strengthening transaction-risk controls.",
             "Delivered an on-prem Arabic↔English document-translation platform that preserves "
             "layout and keeps sensitive data fully in-house, eliminating ~$120K/yr in "
             "third-party translation spend.",
@@ -103,17 +103,16 @@ EDUCATION = [
 
 SKILLS = [
     ("AI Systems / GenAI", "LLM systems, RAG (hybrid retrieval, reranking, citation grounding), "
-     "agentic & multi-step workflows, tool / function calling, prompt & context engineering, "
-     "AI orchestration, structured outputs"),
+     "agentic workflows, tool / function calling, prompt & context engineering, structured outputs"),
     ("AI Engineering / LLMOps", "Automated evaluation (retrieval quality, grounding, "
-     "hallucination mitigation), human review loops, benchmarking, observability & logging, "
-     "latency optimization, reliability engineering"),
+     "hallucination mitigation), human review loops, observability & logging, latency "
+     "optimization, reliability engineering"),
+    ("Regulated AI", "Auditability, traceability, explainability, compliance & release governance"),
     ("Production / Platform", "FastAPI / REST APIs, backend & service architecture, model "
      "serving, Docker, Kubernetes, MLflow, monitoring"),
     ("ML Foundations", "Supervised & unsupervised learning, feature engineering, time-series "
-     "forecasting, A/B testing, statistical evaluation"),
-    ("Cloud & Data", "Azure (OCR, Translation, Custom Models), AWS, SQL"),
-    ("Programming", "Python; full-stack (React, C#, C++)"),
+     "forecasting, A/B testing"),
+    ("Cloud & Languages", "Azure, AWS, SQL · Python; full-stack (React, C#, C++)"),
 ]
 
 SELECTED_SYSTEMS = [

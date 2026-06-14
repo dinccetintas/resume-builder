@@ -9,7 +9,7 @@ AI Engineer who owns production AI platforms end-to-end — from architecture an
 ## PROFESSIONAL EXPERIENCE
 
 **AI Engineer — Commercial Bank of Qatar, Doha** · Jan 2024 – Present
-- Architected and owned production LLM and RAG platforms for document intelligence, workflow automation, and conversational AI, deployed across 7+ business teams and 200+ internal users under banking compliance and data-governance controls.
+- Established reusable AI platform capabilities — shared retrieval, evaluation, document-intelligence, and model-serving components — accelerating delivery of multiple production AI applications across 7+ business teams and 200+ internal users under banking compliance and data-governance controls.
 - Designed the RAG architecture — hybrid retrieval, semantic chunking, reranking, and citation grounding over 900+ compliance documents — delivering explainable, fully traceable, source-linked answers at 87% retrieval accuracy.
 - Established evaluation and release governance for production AI — automated quality benchmarks (retrieval quality, grounding, hallucination mitigation), human review loops, and auditability requirements enforced before every deployment.
 - Built an AI email & inquiry assistant that auto-classifies and drafts responses to 500+ requests/week using LLM reasoning and structured outputs, cutting manual workload 70% and earning the COO Problem Solver Award.
@@ -18,6 +18,7 @@ AI Engineer who owns production AI platforms end-to-end — from architecture an
 - Built and owned the FastAPI / REST services and model-serving layer (Docker, Kubernetes, MLflow) with production monitoring and observability, cutting inference latency ~40% and ensuring reliability.
 - Designed and deployed a real-time fraud-detection service integrating engineered risk features, model evaluation, and monitoring, achieving ROC-AUC 0.93 while strengthening transaction-risk controls.
 - Delivered an on-prem Arabic↔English document-translation platform that preserves layout and keeps sensitive data fully in-house, eliminating ~$120K/yr in third-party translation spend.
+- Partnered with risk, compliance, and business stakeholders to define requirements, align on success metrics, and drive adoption of production AI systems across multiple teams.
 
 **Software Engineer — MeeApps, İstanbul** · Feb 2023 – Jan 2024
 - Designed and developed a high-frequency trading algorithm adopted by 23 brokerage firms managing $10M+ in portfolios, achieving microsecond-level order execution.

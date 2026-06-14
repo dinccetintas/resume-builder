@@ -51,9 +51,10 @@ EXPERIENCE = [
         "title": "AI Engineer — Commercial Bank of Qatar, Doha",
         "dates": "Jan 2024 – Present",
         "bullets": [
-            "Architected and owned production LLM and RAG platforms for document intelligence, "
-            "workflow automation, and conversational AI, deployed across 7+ business teams and "
-            "200+ internal users under banking compliance and data-governance controls.",
+            "Established reusable AI platform capabilities — shared retrieval, evaluation, "
+            "document-intelligence, and model-serving components — accelerating delivery of "
+            "multiple production AI applications across 7+ business teams and 200+ internal "
+            "users under banking compliance and data-governance controls.",
             "Designed the RAG architecture — hybrid retrieval, semantic chunking, reranking, "
             "and citation grounding over 900+ compliance documents — delivering explainable, "
             "fully traceable, source-linked answers at 87% retrieval accuracy.",
@@ -78,6 +79,9 @@ EXPERIENCE = [
             "Delivered an on-prem Arabic↔English document-translation platform that preserves "
             "layout and keeps sensitive data fully in-house, eliminating ~$120K/yr in "
             "third-party translation spend.",
+            "Partnered with risk, compliance, and business stakeholders to define requirements, "
+            "align on success metrics, and drive adoption of production AI systems across "
+            "multiple teams.",
         ],
     },
     {

@@ -59,6 +59,27 @@ export interface ProfileSummary {
   };
 }
 
+// Full, editable profile row (mirrors the `profile` table). Distinct from
+// ProfileSummary, which is a read-optimized projection for the dashboard.
+export interface FullProfile {
+  full_name: string;
+  email: string;
+  phone: string;
+  cv_json: Record<string, unknown>;
+  work_authorization: Record<string, string>;
+  salary_expectation: string;
+  notice_period: string;
+  willing_to_relocate: boolean;
+  eeo_defaults: Record<string, unknown>;
+}
+
+export interface ScreeningAnswerRow {
+  id: string;
+  question_key: string;
+  match_terms: string[];
+  answer: string;
+}
+
 export interface FunnelCounts {
   discovered: number;
   matched: number;
@@ -323,9 +344,60 @@ const MOCK_PROFILE: ProfileSummary = {
   },
 };
 
+// Editable defaults shown when Supabase is not configured, so the editor has
+// realistic content to render against. Seeded from cv/data.py (DEFAULT_CV).
+const MOCK_FULL_PROFILE: FullProfile = {
+  full_name: "Dinc Cetintas",
+  email: "dinccetintas24@gmail.com",
+  phone: "+974 51444964",
+  cv_json: {
+    name: "DINC CETINTAS",
+    role: "AI Engineer",
+    email: "dinccetintas24@gmail.com",
+    phone: "+974 51444964",
+    linkedin_url: "https://www.linkedin.com/in/dinc-cetintas-79a04b205/",
+    github_url: "https://github.com/dinccetintas",
+    profile:
+      "AI Engineer who owns production AI platforms end-to-end — from architecture and evaluation to deployment, observability, and continuous improvement — in regulated financial environments.",
+  },
+  work_authorization: {
+    US: "Requires sponsorship (H-1B)",
+    UK: "Skilled Worker visa needed",
+    NL: "EU citizen — no sponsorship",
+    AE: "Employer-sponsored",
+    QA: "Resident",
+  },
+  salary_expectation: "Open / market rate",
+  notice_period: "1 month",
+  willing_to_relocate: true,
+  eeo_defaults: {},
+};
+
+const MOCK_SCREENING_ANSWERS: ScreeningAnswerRow[] = [
+  {
+    id: "mock_sa_1",
+    question_key: "years_experience",
+    match_terms: ["years", "experience", "how long"],
+    answer: "4+ years building production AI/ML systems.",
+  },
+  {
+    id: "mock_sa_2",
+    question_key: "authorized_to_work_us",
+    match_terms: ["authorized", "work", "sponsorship", "visa", "US"],
+    answer: "I would require visa sponsorship to work in the US.",
+  },
+  {
+    id: "mock_sa_3",
+    question_key: "why_company",
+    match_terms: ["why", "interested", "motivation"],
+    answer:
+      "I'm drawn to teams shipping reliable, auditable LLM systems with real production scale.",
+  },
+];
+
 // --- Helpers -------------------------------------------------------------
 
-function hasSupabaseEnv(): boolean {
+export function hasSupabaseEnv(): boolean {
   return Boolean(
     process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY,
   );
@@ -455,5 +527,64 @@ export async function getProfileSummary(): Promise<ProfileSummary> {
     };
   } catch {
     return MOCK_PROFILE;
+  }
+}
+
+// Full editable profile + whether persistence is wired up. The editor uses
+// `configured` to show a clear "Supabase not configured" banner (writes are
+// no-ops in that case) while still rendering realistic defaults.
+export async function getFullProfile(): Promise<{
+  configured: boolean;
+  profile: FullProfile;
+}> {
+  if (!hasSupabaseEnv()) return { configured: false, profile: MOCK_FULL_PROFILE };
+  try {
+    const sb = await client();
+    const { data, error } = await sb.from("profile").select("*").limit(1).maybeSingle();
+    if (error) throw error;
+    if (!data) return { configured: true, profile: MOCK_FULL_PROFILE };
+    return {
+      configured: true,
+      profile: {
+        full_name: (data.full_name as string) ?? MOCK_FULL_PROFILE.full_name,
+        email: (data.email as string) ?? MOCK_FULL_PROFILE.email,
+        phone: (data.phone as string) ?? "",
+        cv_json: (data.cv_json as Record<string, unknown>) ?? {},
+        work_authorization:
+          (data.work_authorization as Record<string, string>) ?? {},
+        salary_expectation: (data.salary_expectation as string) ?? "",
+        notice_period: (data.notice_period as string) ?? "",
+        willing_to_relocate: (data.willing_to_relocate as boolean) ?? true,
+        eeo_defaults: (data.eeo_defaults as Record<string, unknown>) ?? {},
+      },
+    };
+  } catch {
+    return { configured: false, profile: MOCK_FULL_PROFILE };
+  }
+}
+
+export async function listScreeningAnswers(): Promise<{
+  configured: boolean;
+  answers: ScreeningAnswerRow[];
+}> {
+  if (!hasSupabaseEnv()) return { configured: false, answers: MOCK_SCREENING_ANSWERS };
+  try {
+    const sb = await client();
+    const { data, error } = await sb
+      .from("screening_answers")
+      .select("id, question_key, match_terms, answer")
+      .order("question_key", { ascending: true });
+    if (error) throw error;
+    return {
+      configured: true,
+      answers: (data ?? []).map((r) => ({
+        id: r.id as string,
+        question_key: r.question_key as string,
+        match_terms: (r.match_terms as string[]) ?? [],
+        answer: r.answer as string,
+      })),
+    };
+  } catch {
+    return { configured: false, answers: MOCK_SCREENING_ANSWERS };
   }
 }

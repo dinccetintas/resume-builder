@@ -127,6 +127,27 @@ export interface ApplyDeps {
   anthropic?: Anthropic;
 }
 
+/**
+ * Choose the computer-use driver. When `COMPUTER_USE_DRIVER === "playwright"`,
+ * use the live Playwright/Chromium driver; otherwise keep the safe
+ * `UnconfiguredDriver` so the gate fails safe and never claims "applied".
+ *
+ * The live driver is required lazily so the unconfigured path never loads the
+ * `playwright` module (and its Chromium dependency).
+ */
+function selectDriver(): ComputerUseDriver {
+  if (process.env.COMPUTER_USE_DRIVER === "playwright") {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const { PlaywrightComputerUseDriver } =
+      require("./playwright-driver") as typeof import("./playwright-driver");
+    return new PlaywrightComputerUseDriver({
+      width: DISPLAY_WIDTH,
+      height: DISPLAY_HEIGHT,
+    });
+  }
+  return new UnconfiguredDriver();
+}
+
 // ---------------------------------------------------------------------------
 // Detection heuristics — real logic, deliberately conservative.
 // ---------------------------------------------------------------------------
@@ -217,7 +238,7 @@ export async function applyToJob(
     answer: String(r.answer ?? ""),
   }));
 
-  const driver = deps.driver ?? new UnconfiguredDriver();
+  const driver = deps.driver ?? selectDriver();
 
   try {
     const result = await runComputerUseSession({

@@ -50,10 +50,15 @@ EXPERIENCE = [
             "Established evaluation and release governance for production AI — automated quality "
             "benchmarks (retrieval quality, grounding, hallucination mitigation), human review "
             "loops, and auditability requirements enforced before every deployment.",
-            "Productionized agentic workflows (LLM reasoning, tool calling, OCR, structured "
-            "outputs) powering inquiry automation — 500+ requests/week, 70% manual-load "
-            "reduction, COO Problem Solver Award — and credit-risk & financial-analysis report "
-            "generation.",
+            "Built an AI email & inquiry assistant that auto-classifies and drafts responses to "
+            "500+ requests/week using LLM reasoning and structured outputs, cutting manual "
+            "workload 70% and earning the COO Problem Solver Award.",
+            "Developed agentic credit-risk and financial-analysis report-generation workflows "
+            "that retrieve data via tool calling, reason over it, and produce structured, "
+            "analyst-ready reports.",
+            "Engineered an OCR & document-intelligence pipeline (7 extraction flows) for complex "
+            "Arabic/English identity and financial documents, accelerating document handling "
+            "~65% with full traceability.",
             "Built and owned the FastAPI / REST services and model-serving layer (Docker, "
             "Kubernetes, MLflow) with production monitoring and observability, cutting inference "
             "latency ~40% and ensuring reliability.",

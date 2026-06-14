@@ -23,3 +23,7 @@ out/*.pdf
 
 # OS
 .DS_Store
+
+# TS incremental build info
+web/tsconfig.tsbuildinfo
+*.tsbuildinfo

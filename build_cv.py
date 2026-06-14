@@ -58,15 +58,16 @@ EXPERIENCE = [
             "Designed the RAG architecture — hybrid retrieval, semantic chunking, reranking, "
             "and citation grounding over 900+ compliance documents — delivering explainable, "
             "fully traceable, source-linked answers at 87% retrieval accuracy.",
-            "Established evaluation and release governance for production AI — automated quality "
-            "benchmarks (retrieval quality, grounding, hallucination mitigation), human review "
-            "loops, and auditability requirements enforced before every deployment.",
+            "Defined architectural, evaluation, and release standards for the production AI "
+            "systems I built — automated quality benchmarks (retrieval quality, grounding, "
+            "hallucination mitigation), human review loops, and auditability enforced before "
+            "every deployment.",
             "Built an AI email & inquiry assistant that auto-classifies and drafts responses to "
             "500+ requests/week using LLM reasoning and structured outputs, cutting manual "
             "workload 70% and earning the COO Problem Solver Award.",
-            "Developed agentic credit-risk and financial-analysis report-generation workflows "
-            "that retrieve data via tool calling, reason over it, and produce structured, "
-            "analyst-ready reports.",
+            "Developed production AI workflows for credit-risk and financial analysis, combining "
+            "retrieval, tool calling, and LLM reasoning to generate structured, analyst-ready "
+            "reports.",
             "Engineered an OCR & document-intelligence pipeline (7 extraction flows) for complex "
             "Arabic/English identity and financial documents, accelerating document handling "
             "~65% with full traceability.",
@@ -88,11 +89,12 @@ EXPERIENCE = [
         "title": "Software Engineer — MeeApps, İstanbul",
         "dates": "Feb 2023 – Jan 2024",
         "bullets": [
-            "Designed and developed a high-frequency trading algorithm adopted by 23 brokerage "
-            "firms managing $10M+ in portfolios, achieving microsecond-level order execution.",
-            "Engineered the ultra-low-latency execution path — optimizing ITCH, OUCH, and TCP "
-            "protocols against co-located exchange servers — and built the full production "
-            "stack (React/C#/C++ frontend, backend services, and live market-data feeds).",
+            "Built a low-latency order-execution platform — including smart order-routing and "
+            "execution algorithms — adopted by 23 brokerage firms managing $10M+ in "
+            "portfolios, achieving microsecond-level execution.",
+            "Engineered the ultra-low-latency execution path by optimizing ITCH, OUCH, and TCP "
+            "protocols against co-located exchange servers, and built the full production stack "
+            "(React/C#/C++ frontend, backend services, and live market-data feeds).",
             "Owned end-to-end system performance and reliability, sustaining 99.9% uptime "
             "under live trading load.",
         ],

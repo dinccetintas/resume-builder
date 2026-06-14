@@ -83,9 +83,21 @@ chat or a PR, rotate it.
 - [x] Reusable CV render engine (tailored variants)
 - [x] Supabase schema + secret hygiene
 - [x] High-value ranking + discovery adapters (Adzuna / Greenhouse / Lever / Ashby)
-- [ ] Tailoring step (Anthropic) + Vercel wiring of `api/render.py`
-- [ ] Next.js UI (ui-ux-pro-max skill + 21st.dev Magic MCP): dashboard, job table,
-      profile/answer-bank editor, `needs_manual` queue
-- [ ] Computer-use apply worker + IMAP auto-verification + webhooks
-- [ ] Gulf best-effort discovery, analytics, response tracking
+- [x] Tailoring step (Anthropic) + `api/render.py` wiring + cron routes
+- [x] Next.js UI: dashboard, jobs table, profile, `needs_manual` queue
+- [x] Computer-use apply worker (engine, confidence gate) + IMAP reader + webhook
+- [ ] Live wiring (need accounts/creds; cannot run in CI):
+  - [ ] Provision Supabase (apply `0001_init.sql`) + `cv-docs` Storage bucket
+  - [ ] Set env vars in Vercel; deploy; point `RENDER_FUNCTION_URL` at `api/render.py`
+  - [ ] Plug a live `ComputerUseDriver` (sandboxed browser/desktop) into `apply/engine.ts`
+  - [ ] Confirm the webhook signing scheme; swap in the SDK verifier
+- [ ] Upgrade `@anthropic-ai/sdk` to use native structured outputs + adaptive thinking
+- [ ] Gulf best-effort discovery, analytics, response tracking, profile editor
+
+## Verified locally
+
+`cd web && npx tsc --noEmit` (clean), `npx vitest run` (48 tests), `npx next build`
+(9 routes), and `python3 -c "from api.render import _render; ..."` (valid DOCX+PDF
+from tailored JSON). Live integrations (Supabase/Anthropic/IMAP/computer use) require
+credentials and are isolated behind clear interfaces — see TODOs above.
 ```

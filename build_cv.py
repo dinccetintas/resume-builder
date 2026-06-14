@@ -74,12 +74,11 @@ EXPERIENCE = [
         "title": "Software Engineer — MeeApps, İstanbul",
         "dates": "Feb 2023 – Jan 2024",
         "bullets": [
-            "Architected and delivered a high-frequency trading platform for 23 brokerage firms "
-            "managing $10M+ in portfolios, achieving microsecond-level execution by optimizing "
-            "ITCH, OUCH, and TCP protocols for ultra-low latency.",
-            "Built and owned the full production stack — React/C#/C++ frontend, backend "
-            "services, and co-located live market-data feeds — under strict real-time "
-            "reliability constraints.",
+            "Designed and developed a high-frequency trading algorithm adopted by 23 brokerage "
+            "firms managing $10M+ in portfolios, achieving microsecond-level order execution.",
+            "Engineered the ultra-low-latency execution path — optimizing ITCH, OUCH, and TCP "
+            "protocols against co-located exchange servers — and built the full production "
+            "stack (React/C#/C++ frontend, backend services, and live market-data feeds).",
             "Owned end-to-end system performance and reliability, sustaining 99.9% uptime "
             "under live trading load.",
         ],

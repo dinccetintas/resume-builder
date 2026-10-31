@@ -2,7 +2,7 @@
 
 CV'deki **her kişisel iddia kendi orijinal CV'sinden** geliyor; hiçbir rakam uydurulmadı.
 Şirket bağlam satırları (ŞA-RA'nın 11 fabrikası, 2026 halka arzı, EBRD ödülünün detayları vb.)
-kamuya açık kaynaklardan doğrulandı (kaynaklar: `RESEARCH.md`).
+kamuya açık kaynaklardan doğrulandı (kaynaklar: `RESEARCH_AND_SCORECARD.md`).
 
 Aşağıdaki listeyi kendisine iletip cevaplarını aldığımızda CV'yi tek komutla güncelleyebiliriz
 (`candidates/ilksen_cetintas.py` → `python build_cv.py candidates/ilksen_cetintas.py --out out/private`).

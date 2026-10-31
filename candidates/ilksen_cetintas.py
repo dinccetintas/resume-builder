@@ -52,13 +52,13 @@ RESUME = Resume(
     photo=getattr(_priv, "PHOTO", "") if _priv else "",
     metrics=[
         ("~5,000", "employees in Group HR remit at IC Holding"),
-        ("4% → 25%", "women in technical roles in 1 year · EBRD Gold"),
-        ("2026 IPO", "CHRO of ŞA-RA through its Borsa İstanbul listing"),
-        ("3×", "HR functions built: Siemens, TED University, ŞA-RA"),
+        ("4% → 25%", "women in tech roles in 1 year · EBRD Gold"),
+        ("~2,000", "employees · 11 factories · CHRO & ExCom since 2021"),
+        ("BIST 2026", "ŞA-RA listed on Borsa İstanbul, July 2026"),
     ],
     profile=(
-        "CHRO and Executive Committee member who turns founder-led industrial groups into "
-        "institutions. At **ŞA-RA Group** (~2,000 employees, 11 factories; listed on Borsa İstanbul "
+        "CHRO and Executive Committee member with 25+ years in industrial, defense and global "
+        "technology groups, turning founder-led businesses into institutions. At **ŞA-RA Group** (~2,000 employees, 11 factories; listed on Borsa İstanbul "
         "in 2026) built HR governance, group-wide grading and pay, and a productivity unit that "
         "links labor cost to production tonnage for Board capacity decisions. Previously Deputy "
         "GM HR of **IC Holding** (~5,000 employees), leading the gender initiative behind an "
@@ -70,15 +70,15 @@ RESUME = Resume(
         "**Award-winning gender inclusion:** led the initiative that raised women in technical "
         "roles from 4% to 25% within one year at TREDAŞ, IC Holding's electricity distributor; "
         "the program won the EBRD Gold Award for Environmental & Social Best Practice (2019).",
-        "**Institutionalized a ~2,000-employee, 11-factory group** as CHRO through its July 2026 "
-        "Borsa İstanbul listing: built ŞA-RA's HR operating model, governance, grading and pay "
-        "structure and people systems from the ground up.",
+        "**Institutionalized a ~2,000-employee, 11-factory group** (listed on Borsa İstanbul in "
+        "July 2026): built ŞA-RA's HR operating model, governance, grading and pay structure and "
+        "people systems from the ground up.",
         "**Productivity managed like a P&L line:** founded a Workforce Productivity & Planning "
         "Unit that ties planned vs. actual production tonnage to unit labor cost and workforce "
-        "mix, giving the Board a fact base for capacity and headcount decisions.",
+        "mix, giving the Board a fact base for capacity decisions.",
         "**One pay logic for ~5,000 employees:** Hay-based job evaluation across every IC Holding "
-        "company, with a common grading framework and salary scales, so pay decisions became "
-        "consistent and defensible across construction, energy, airports and tourism.",
+        "company, with a common grading framework and salary scales to support consistent pay "
+        "decisions and internal equity across construction, energy, airports and tourism.",
         "**HR as a business at Siemens Communications Türkiye:** built the HR function, played a "
         "key role in turning it into a profit center through internal service agreements and "
         "pricing, and led the Siemens Leadership Excellence program that became a benchmark "
@@ -94,11 +94,12 @@ RESUME = Resume(
                      "transmission hardware and galvanizing; 11 factories, projects in 120+ countries; "
                      "~2,000 employees. Listed on Borsa İstanbul in July 2026."),
             bullets=[
-                "**Transformation:** lead the group's institutionalization and culture change, building "
-                "HR policies, organization structures and people systems (workforce planning, "
-                "recruitment, succession, careers, leadership development) from the ground up and "
-                "moving HR from an operational approval role to a strategic function accountable "
-                "for governance, workforce productivity and organizational effectiveness.",
+                "**Transformation:** lead institutionalization and culture change, building HR "
+                "policies, structures and people systems from the ground up and repositioning HR from "
+                "approvals to a strategic function accountable for governance, productivity and "
+                "organizational effectiveness.",
+                "**Talent systems:** group-wide workforce planning, recruitment, succession, career "
+                "planning and leadership development across factories and central functions.",
                 "**Board partnership:** strategic partner to the Board and Executive Committee, "
                 "preparing the productivity, workforce-cost and people-risk analyses behind "
                 "workforce and capacity decisions.",
@@ -112,7 +113,7 @@ RESUME = Resume(
                 "**Pay for performance:** designed scorecard-based management by objectives "
                 "(departmental goal pools, shared cross-functional goals, weighted individual "
                 "scorecards with evidence requirements) and a variable-pay framework combining "
-                "scorecard, competency and talent-matrix results, so bonuses follow measurable outcomes.",
+                "scorecard, competency and talent-matrix results, to support consistent, performance-based bonus decisions.",
                 "**HR digitalization:** designed and implemented an e-HR platform inside the company "
                 "ERP, putting objectives, competency assessments and approval workflows on one system.",
                 "**Governance & cost:** brought labor-law compliance and people risk under one HR "
@@ -126,9 +127,9 @@ RESUME = Resume(
             title="Chief Human Resources Officer (CHRO)",
             dates="2019 – 2021",
             context=("Defense-technology company of Nurol Holding: advanced ballistic ceramics and "
-                     "armor systems for personnel, vehicles and aircraft; exports worldwide."),
+                     "armor systems for personnel, vehicles and aircraft."),
             bullets=[
-                "**Succession for critical roles:** led HR strategy for a defense exporter and built "
+                "**Succession for critical roles:** led HR strategy in defense technology and built "
                 "performance, talent-development and reward systems that strengthened the "
                 "leadership pipeline and succession readiness for critical technical roles; "
                 "introduced competency-based learning frameworks to improve role readiness.",
@@ -224,7 +225,7 @@ RESUME = Resume(
     awards=[
         ("2025", "**Exemplary Woman HR Marvel of the Year**, Global Business Conclave, London "
                  "(White Page International)."),
-        ("2024", "**Global 200 Power Leaders in HR**, selected among senior executives from 42 "
+        ("2024", "**Global 200 Power Leaders**, selected among senior executives from 42 "
                  "countries, Dubai (White Page International)."),
         ("2019", "**EBRD Gold Award, Environmental & Social Best Practice**, won by TREDAŞ / "
                  "IC İçtaş Elektrik for its gender-inclusion program; led the initiative and was "

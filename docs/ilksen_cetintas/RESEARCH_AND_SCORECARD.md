@@ -55,3 +55,49 @@ context and award verification only**.
   optional in DACH; avoid in UK/US. → photo and no-photo PDFs.
 - **Design:** single column, one accent colour, no skill bars/charts/icons/two-column templates
   ([Hiration](https://www.hiration.com/blog/skill-bars-resume/), Ladders 2018).
+
+## 4. Personas and review process
+
+Four review passes, each by an independent reviewer that had not seen the
+others' conclusions:
+
+| Persona | Focus | Key findings acted on |
+|---|---|---|
+| **Retained-search Partner** (CHRO practice, Türkiye/Gulf/EU) | Shortlist decision, red flags | Commercial awards out of Signature Achievements; EBRD wording kept to her own claim; Nurol jargon bullet cut; Siemens "measurable improvements" removed; 2006–09 gap flagged |
+| **CEO + Board / NomCo Chair** | Business language, overstatement | "own the budget" → "prepare" (her word); "turned HR into a profit center" → "played a key role in"; "benchmarked" → "positioned"; process language → outcomes; tighter profile |
+| **ATS ops + fact-integrity auditor** | Parsing, keywords, claim-by-claim audit | Footer reduced to page number; TAI moved under the standard *Professional Experience* heading; DOCX Heading styles, A4, clean metadata, plain-hyphen dates; 9 supported keywords added; degree and job titles restored to her originals; US spelling throughout |
+| **Independent final panel** (all three lenses, blind to earlier drafts) | Re-score both versions | "3×" figure replaced by scope figures; IPO stated as a company fact, not her deliverable; "25+ years" (her own figure) restored; remaining unsupported qualifiers removed |
+
+## 5. Scorecard (100-point rubric from the best-practice research)
+
+| Criterion (weight) | Original | Final (independent panel) |
+|---|---|---|
+| Quantified, board-relevant achievements (15) | 5 | 6 |
+| Top third of page 1 — 7-second scan (12) | 4 | 8 |
+| Scope & context (12) | 5 | 8 |
+| CHRO strategic coverage (12) | 6 | 7.5 |
+| ATS parse-ability (10) | 7 | 9 |
+| Chronology integrity (8) | 5 | 7 |
+| Keyword alignment (8) | 6 | 8 |
+| Scannability (8) | 5 | 7.5 |
+| Proof & credentials (8) | 6 | 6.5 |
+| Design restraint & polish (7) | 5 | 8.5 |
+| **Weighted total** | **~54** | **~75 → ~78 after the panel's last edits** |
+
+The search-partner pass scored the original ~42 and the first draft ~67.
+
+**Ceiling.** With the facts in her original CV, ~78–80 is the ceiling. The
+remaining 10–12 points need information only she can provide: outcome
+numbers for 2019–2026 (labor cost per ton, attrition, succession coverage,
+pay-adjustment cost), her HR work on the IPO, union and labor-relations
+record, team size and reporting line, and the 2006–2009 gap. See
+`SORULAR_VE_DOGRULAMA.md` (in Turkish, for the candidate).
+
+## 6. Automated checks (`tests/test_executive.py`)
+
+- Turkish characters survive PDF text extraction (İlkşen, ŞA-RA, TREDAŞ, İçtaş).
+- Each key figure is extracted on the same line as its label.
+- Section order is standard; the PDF is ≤ 3 pages.
+- The DOCX has no tables, text boxes or images.
+- The public build has no phone, e-mail or photo.
+- The classic (Dinc) CV still builds.

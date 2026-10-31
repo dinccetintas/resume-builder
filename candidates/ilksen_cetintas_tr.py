@@ -29,7 +29,7 @@ if _priv:
                  (_priv.EMAIL, "mailto:" + _priv.EMAIL)]
 _contact += [
     ("linkedin.com/in/ilkşen-çetintaş-b52a6920", _en.LINKEDIN),
-    ("Çift vatandaşlık (TC ve AB) · yurt içi ve yurt dışı görevlere açık", None),
+    ("Çift vatandaşlık (T.C. ve AB) · yurt içi ve yurt dışı görevlere açık", None),
 ]
 
 RESUME = Resume(
@@ -37,51 +37,50 @@ RESUME = Resume(
     lang="tr",
     name="İlkşen Çetintaş",
     role="CHRO · İnsan Kaynaklarından Sorumlu Üst Yönetici · İcra Kurulu Üyesi",
-    tagline=("Sıfırdan İK kuruluşu  ·  Kurumsallaşma ve halka arza hazırlık  ·  "
+    tagline=("İK fonksiyonunu sıfırdan kurma  ·  Kurumsallaşma ve halka arza hazırlık  ·  "
              "CEO ve Yönetim Kurulu ile stratejik iş ortaklığı"),
     contact_segments=_contact,
     photo=getattr(_priv, "PHOTO", "") if _priv else "",
     metrics=[
         ("~5.000", "çalışan · IC Holding Grup İK sorumluluğu"),
-        ("%4 → %25", "1 yılda teknik rollerde kadın · EBRD Altın"),
+        ("%4 → %25", "bir yılda teknik kadrolarda kadın · EBRD Altın"),
         ("~2.000", "çalışan · 11 fabrika · 2021'den beri CHRO"),
-        ("Halka Arz", "2026 · ŞA-RA'nın kurumsallaşmasını yönettim"),
+        ("Halka Arz", "2026 · ŞA-RA'nın kurumsallaşma süreci"),
     ],
     profile=(
         "Sanayi, savunma, enerji ve küresel teknoloji şirketlerinde **25 yılı aşkın** İK liderliği "
-        "deneyimine sahip bir CHRO ve İcra Kurulu üyesiyim. Uzmanlığım, kurucu liderli şirketleri "
-        "profesyonel yönetilen kurumlara dönüştürmek: **ŞA-RA Grubu'nun 2026 Borsa İstanbul halka "
-        "arzına uzanan kurumsallaşma sürecini** yönettim, **IC Holding'de ~5.000 çalışanın** "
+        "deneyimine sahip bir CHRO ve İcra Kurulu üyesiyim. Uzmanlık alanım, kurucu yönetimindeki "
+        "şirketleri profesyonel yönetimle işleyen kurumlara dönüştürmektir: **ŞA-RA Grubunun 2026 "
+        "Borsa İstanbul halka arzına uzanan kurumsallaşma sürecini** yönettim, **IC Holding'de "
+        "yaklaşık 5.000 çalışanın** "
         "İK'sından sorumlu oldum ve savunma şirketi **Nurol Teknoloji**'de İK'yı yönettim. "
-        "Kariyerimin temelini **TAI** ve **Siemens**'te attım. İnancım şu: İK, insan kararları "
-        "**ölçülebilir, adil ve iş sonuçlarına bağlı** olduğunda Yönetim Kurulu masasındaki yerini "
-        "hak eder. Türkiye'de ve yurt dışında CHRO, İK Grup Direktörü ve İK'dan Sorumlu Genel Müdür "
-        "Yardımcısı rollerine açığım."
+        "Kariyerimin temellerini **TAI** ve **Siemens**'te attım. İK'nın, insan kararlarını "
+        "**ölçülebilir, adil ve iş sonuçlarıyla bağlantılı** kıldığında Yönetim Kurulu gündeminde "
+        "yer almayı hak ettiğine inanıyorum. CHRO, Grup İK Direktörü ve İK'dan Sorumlu Genel Müdür "
+        "Yardımcısı pozisyonlarını değerlendiriyorum."
     ),
     highlights=[
-        "**ŞA-RA'yı halka arza hazırladım:** ~2.000 çalışanlı, 11 fabrikalı grubun **Temmuz 2026 "
-        "Borsa İstanbul halka arzına** uzanan kurumsallaşma sürecini yönettim; İK yönetişimini, "
-        "politikaları, kademe, ücret ve performans sistemlerini **sıfırdan kurdum**.",
-        "**Teknik rollerde kadın oranını bir yılda %4'ten %25'e çıkardım:** IC Holding'in elektrik "
-        "dağıtım şirketi TREDAŞ'ta yürüttüğüm program, Çevresel ve Sosyal En İyi Uygulama dalında "
-        "**EBRD Altın Ödülü**'nü kazandı (2019).",
-        "**İşgücü maliyetini üretime bağladım:** **planlanan ve gerçekleşen üretim tonajını** birim "
-        "işçilik maliyetiyle karşılaştıran İşgücü Verimliliği ve Planlama Birimi'ni kurdum; böylece "
-        "Yönetim Kurulu **kapasite kararlarını veriye dayanarak** alıyor.",
-        "**~5.000 çalışan için tek ve adil ücret sistemi kurdum:** inşaattan enerjiye, "
-        "havalimanlarından turizme **tüm IC Holding şirketlerinde** **Hay iş değerlemesini**, ortak "
-        "kademe yapısını ve ücret skalalarını hayata geçirdim.",
-        "**Siemens'te İK'yı bir işletme gibi yönettim:** Siemens Communications Türkiye'nin İK "
-        "departmanını kurdum, departmanın **kâr merkezine** dönüşmesinde kilit rol oynadım ve "
-        "**Siemens Avrupa genelinde örnek gösterilen** liderlik programını yönettim.",
+        "**ŞA-RA'yı halka arza hazırladım:** yaklaşık 2.000 çalışanlı, 11 fabrikalı grubun **Temmuz "
+        "2026 halka arzına** uzanan kurumsallaşma sürecini yönettim; İK yönetişimini ve "
+        "sistemlerini **sıfırdan kurdum**.",
+        "**Teknik kadrolarda kadın oranını bir yılda %4'ten %25'e çıkardım:** TREDAŞ'ta (IC Holding) "
+        "yürüttüğüm program **EBRD Altın Ödülünü** kazandı (2019).",
+        "**İşgücü maliyetini üretime bağladım:** üretim tonajını birim işçilik maliyetiyle "
+        "karşılaştıran İşgücü Verimliliği ve Planlama Birimini kurdum; Yönetim Kurulu **kapasite "
+        "kararlarını veriyle** alıyor.",
+        "**Yaklaşık 5.000 çalışan için tek ve adil ücret sistemi:** **tüm IC Holding şirketlerinde** "
+        "Hay metodolojisiyle iş değerlemesi, ortak kademe yapısı ve ücret skalaları kurdum.",
+        "**Siemens'te İK'yı kâr merkezi anlayışıyla yönettim:** İK departmanını kurdum, **kâr "
+        "merkezine** dönüşümünde kilit rol oynadım ve **Siemens Avrupa'da örnek gösterilen** "
+        "liderlik programını yönettim.",
     ],
     awards=[
         ("2025", "**Exemplary Woman HR Marvel of the Year**, Global Business Conclave, Londra"),
         ("2024", "**Global 200 Power Leaders**: 42 ülkeden üst düzey yöneticiler arasından seçildim, Dubai"),
-        ("2019", "**EBRD Altın Ödülü** (Gold Award), Çevresel ve Sosyal En İyi Uygulama: TREDAŞ'taki "
-                 "kadın istihdamı girişimini yönettim ve ödülün alınmasında belirleyici rol oynadım"),
-        ("2018", "**T.C. Enerji ve Tabii Kaynaklar Bakanlığı Ödülü**: madencilik ve enerji sektörünün "
-                 "en başarılı ilk üç iş kadını arasına seçildim"),
+        ("2019", "**EBRD Altın Ödülü**, Çevresel ve Sosyal En İyi Uygulama: ödüle layık görülen TREDAŞ "
+                 "kadın istihdamı girişimini yönettim"),
+        ("2018", "**T.C. Enerji ve Tabii Kaynaklar Bakanlığı Ödülü**: madencilik ve enerjide en "
+                 "başarılı üç iş kadınından biri"),
     ],
     experience=[
         Job(
@@ -90,30 +89,30 @@ RESUME = Resume(
             title="CHRO (İnsan Kaynaklarından Sorumlu Üst Yönetici) · İcra Kurulu Üyesi",
             dates="2021 – Günümüz",
             context=("1985'te kurulan enerji altyapısı üreticisi: çelik yapılar, enerji nakil hattı "
-                     "donanımları ve galvanizleme; 11 fabrika, 120'den fazla ülkede proje, ~2.000 "
-                     "çalışan. Temmuz 2026'da Borsa İstanbul'da halka arz edildi."),
+                     "donanımları ve galvanizleme; 11 fabrika, 120'den fazla ülkede proje, yaklaşık 2.000 "
+                     "çalışan. Temmuz 2026'da Borsa İstanbul'da halka açıldı."),
             bullets=[
                 "**Halka arza giden yol:** grubu **2026 halka arzına** taşıyan kurumsallaşma ve kültür "
                 "dönüşümü sürecini yönettim; İK politikalarını, süreçlerini ve sistemlerini "
                 "**sıfırdan kurdum**.",
-                "**Stratejik İK:** İK'yı yalnızca onay veren bir birimden **yönetişim, verimlilik ve iş "
+                "**Stratejik İK:** İK'yı yalnızca onay mercii olan bir birimden **yönetişim, verimlilik ve iş "
                 "sonuçlarından** sorumlu stratejik bir fonksiyona dönüştürdüm.",
                 "**Yönetim Kurulu ile iş ortaklığı:** **Yönetim Kurulu ve İcra Kurulu** için işgücü ve "
                 "kapasite kararlarına temel olan verimlilik, işgücü maliyeti ve risk analizlerini "
                 "hazırlıyorum.",
                 "**Verimlilik birimi:** **üretim tonajını, birim işçilik maliyetini ve işgücü yapısını** "
-                "birbirine bağlayan İşgücü Verimliliği ve Planlama Birimi'ni kurdum ve yönetiyorum.",
-                "**Adil ücret:** tüm Grup şirketleri için **kademe ve bant bazlı ücret yapısını** "
-                "kurdum, her pozisyonu bu yapıya göre değerlendirdim ve **iç ücret adaletini** "
+                "birbirine bağlayan İşgücü Verimliliği ve Planlama Birimini kurdum ve yönetiyorum.",
+                "**Adil ücret:** tüm grup şirketleri için **kademe ve bant bazlı ücret yapısını** "
+                "kurdum, tüm pozisyonları bu yapıda konumlandırdım ve **iç ücret adaletini** "
                 "güçlendiren düzeltme önerileri hazırladım.",
                 "**Performansa dayalı ücret:** departman, ortak ve bireysel hedeflerden oluşan hedef "
-                "karnelerini ve primleri sonuçlara, yetkinliklere ve yetenek değerlendirmelerine "
-                "bağlayan **değişken ücret modelini** tasarladım.",
+                "karnelerini tasarladım; primleri sonuçlara, yetkinliklere ve yetenek "
+                "değerlendirmelerine bağlayan **değişken ücret modelini** kurdum.",
                 "**Dijital İK:** hedefleri, yetkinlik değerlendirmelerini ve onay süreçlerini tek "
-                "sistemde toplayan **e-İK platformunu şirket ERP'si içinde** kurdum.",
-                "**Yetenek ve yönetişim:** işgücü planlama, işe alım, **yedekleme (succession)**, "
-                "kariyer planlama ve liderlik gelişimi sistemlerini kurdum; iş hukukuyla uyumlu İK "
-                "yönetişim çerçevesini oluşturdum; yıllık İK bütçesini hazırlıyorum.",
+                "sistemde toplayan **e-İK platformunu şirketin ERP sistemine entegre ederek** kurdum.",
+                "**Yetenek ve yönetişim:** işgücü planlaması, işe alım, **yedekleme planlaması**, kariyer "
+                "ve liderlik gelişimi sistemlerini kurdum; iş mevzuatına uygun İK yönetişim "
+                "çerçevesini oluşturdum; yıllık İK bütçesini hazırlıyorum.",
             ],
         ),
         Job(
@@ -124,7 +123,7 @@ RESUME = Resume(
             context=("Nurol Holding'in savunma teknolojileri şirketi: personel, kara ve hava araçları "
                      "için balistik seramik ve zırh çözümleri."),
             bullets=[
-                "**Savunmada İK:** **büyük mavi yaka ekiplerine** sahip ve sıkı denetime tabi bir savunma "
+                "**Savunmada İK:** **mavi yaka ağırlıklı** ve sıkı denetime tabi bir savunma "
                 "şirketinde İK stratejisini, büyüme ve inovasyon hedefleriyle uyumlu biçimde yönettim.",
                 "**Yedekleme:** kritik teknik roller için **liderlik havuzunu** güçlendiren performans, "
                 "yetenek ve ödüllendirme sistemleri kurdum; yetkinlik bazlı öğrenme modelini hayata "
@@ -140,22 +139,22 @@ RESUME = Resume(
             location="Ankara",
             title="İnsan Kaynaklarından Sorumlu Genel Müdür Yardımcısı",
             dates="2013 – 2019",
-            context=("Çok sektörlü Türk holdingi: inşaat ve altyapı (Yavuz Sultan Selim Köprüsü ve Kuzey "
-                     "Marmara Otoyolu dahil), enerji (TREDAŞ), havalimanları, turizm ve sanayi; "
-                     "~5.000 çalışan."),
+            context=("Çok sektörlü holding: inşaat ve altyapı (Yavuz Sultan Selim Köprüsü ve Kuzey "
+                     "Marmara Otoyolu dâhil), enerji (TREDAŞ), havalimanları, turizm ve sanayi; "
+                     "yaklaşık 5.000 çalışan."),
             bullets=[
                 "**Kadın istihdamı:** TREDAŞ'ta teknik rollerdeki kadın oranını **bir yılda %4'ten "
                 "%25'e** çıkaran girişimi yönettim (**EBRD Altın Ödülü 2019**).",
-                "**İş değerlemesi:** **tüm holding şirketlerinde Hay iş değerlemesini** yürüttüm; "
+                "**İş değerlemesi:** **tüm holding şirketlerinde Hay metodolojisiyle iş değerlemesini** yürüttüm; "
                 "tutarlı ve adil ücret kararları için ortak kademe yapısını ve ücret skalalarını "
                 "oluşturdum.",
                 "**İşgücü maliyeti:** İK stratejisini ve **işgücü maliyet planlamasını** yönettim; İK "
                 "bütçelerini (ücret, değişken ücret, SGK primleri, kıdem ve ihbar tazminatları, yan "
                 "haklar, eğitim) hazırladım.",
-                "**Performans ve ödüllendirme:** performansı doğrudan ödüllendirmeye bağlayan yetkinlik "
-                "yönetimini ve **değişken ücret karnelerini** tasarladım.",
-                "**İK dijitalleşmesi:** daha net veri ve daha iyi kararlar için **SAP tabanlı İK "
-                "dönüşümünü** ve işgücü analitiğini yönettim.",
+                "**Performans ve ödüllendirme:** performansı doğrudan ödüllendirmeyle ilişkilendiren "
+                "yetkinlik modelini ve **prim karnelerini** tasarladım.",
+                "**İK dijitalleşmesi:** veri kalitesini ve karar süreçlerini güçlendiren **SAP tabanlı İK "
+                "dönüşümünü** ve İK analitiği çalışmalarını yönettim.",
             ],
         ),
         Job(
@@ -163,9 +162,9 @@ RESUME = Resume(
             location="Ankara",
             title="İnsan Kaynakları Direktörü",
             dates="2011 – 2013",
-            context="Türk Eğitim Derneği'nin (TED) kurduğu, 2012'de eğitime başlayan vakıf üniversitesi.",
+            context="Türk Eğitim Derneğinin (TED) kurduğu, 2012'de eğitime başlayan vakıf üniversitesi.",
             bullets=[
-                "Kuruluş ekibinin bir parçası olarak üniversitenin **İK fonksiyonunu ve yönetişim "
+                "Kurucu ekipte yer alarak üniversitenin **İK fonksiyonunu ve yönetişim "
                 "yapısını sıfırdan kurdum**.",
             ],
         ),
@@ -184,7 +183,7 @@ RESUME = Resume(
             location="",
             title="Grup İnsan Kaynakları Müdürü",
             dates="1996 – 2006",
-            context=("Siemens Industries Inc.: Siemens'in Türkiye'deki telekomünikasyon işi (operatör "
+            context=("Siemens Industries Inc.: Siemens'in Türkiye'deki telekomünikasyon iş birimi (operatör "
                      "altyapısı, kurumsal ağlar, mobil cihazlar)."),
             bullets=[
                 "**Kâr merkezi olarak İK:** İK departmanını kurdum ve yönettim; iç hizmet anlaşmaları ve "
@@ -194,9 +193,9 @@ RESUME = Resume(
                 "program **Siemens Avrupa genelinde örnek** gösterildi.",
                 "**Ücret ve ödüllendirme:** şirket genelinde **iş değerlemesini (CRG, Hay)** yönettim, "
                 "kademe ve bant bazlı ücret yapıları kurdum, hedef karnelerini değişken ücrete bağladım.",
-                "**Yetenek sistemleri:** **değerlendirme ve gelişim merkezlerini**, oryantasyon ve "
-                "outplacement programlarını kurdum; küresel işe alım portalını Türkiye'de devreye "
-                "aldım; SAP İK entegrasyonuna katkı sağladım.",
+                "**Yetenek sistemleri:** **değerlendirme ve gelişim merkezlerini**, işe uyum (oryantasyon) "
+                "ve kariyer geçiş (outplacement) programlarını kurdum; küresel işe alım portalını "
+                "Türkiye'de devreye aldım; SAP İK entegrasyonuna katkıda bulundum.",
             ],
         ),
         Job(
@@ -207,36 +206,39 @@ RESUME = Resume(
             context="Türkiye'nin ulusal havacılık ve uzay şirketi; 1984'te F-16 ortak üretimi için kuruldu.",
             bullets=[
                 "İş değerlemesi, ücret skalaları, ücret politikası, ücret anketleri, performans ve "
-                "ödüllendirme alanlarındaki İK politikalarına katkı sağladım; ilk ve orta kademe "
-                "yöneticilere performans değerlendirme ve gelişim atölyeleri verdim.",
+                "ödüllendirme alanlarındaki İK politikalarına katkıda bulundum; ilk ve orta düzey "
+                "yöneticilere yönelik performans değerlendirme ve gelişim atölyeleri düzenledim.",
             ],
         ),
     ],
     approach=[
-        "**Kurumlar kurucularından uzun yaşar:** net yönetişim ve yedekleme, şirketi büyütür "
-        "(**ŞA-RA, halka arz yolu**).",
-        "**Ölçülmeyen yönetilemez:** insan kararları veriye dayanmalıdır (**İşgücü Verimliliği Birimi**).",
+        "**Kurumlar kurucularından daha uzun ömürlüdür:** net yönetişim ve yedekleme planlaması "
+        "büyümeyi kalıcı kılar (**ŞA-RA, halka arz süreci**).",
+        "**Ölçülmeyen yönetilemez:** insan kararları veriye dayanmalıdır (**İşgücü Verimliliği ve "
+        "Planlama Birimi**).",
         "**Adil sistemler güven yaratır:** şeffaf kademe, hedef ve ödül (**IC Holding, Siemens, ŞA-RA**).",
-        "**İK sonuçlardan sorumludur:** İK bir işletme gibi yönetilmelidir (**Siemens'te kâr merkezi İK**).",
-        "**Hedefli çeşitlilik:** kapsayıcılık her KPI gibi yönetilmelidir (**%4 → %25, EBRD Altın**).",
+        "**İK sonuçlardan sorumludur:** İK, bir iş birimi gibi yönetilmelidir (**Siemens'te kâr "
+        "merkezine dönüşen İK**).",
+        "**Hedefli çeşitlilik:** kapsayıcılık da diğer tüm KPI'lar gibi yönetilmelidir (**%4 → %25, "
+        "EBRD Altın Ödülü**).",
     ],
     competencies=[
-        "İK ve İnsan Stratejisi", "İK Operasyon Modeli Tasarımı", "Organizasyonel Etkinlik",
+        "İK Stratejisi", "İK Operasyon Modeli Tasarımı", "Organizasyonel Etkinlik",
         "İş ve Kültür Dönüşümü", "Değişim Yönetimi", "Yönetim Kurulu ve Paydaş Yönetimi",
-        "İK Yönetişimi ve İnsan Riski", "Ücret ve Yan Haklar", "Toplam Ödüllendirme Stratejisi",
+        "İK Yönetişimi ve Risk Yönetimi", "Ücret ve Yan Haklar", "Toplam Ödüllendirme Stratejisi",
         "İş Değerlemesi (Hay, CRG)", "Kademe ve Ücret Yapıları", "İç Ücret Adaleti",
-        "Performans ve Değişken Ücret", "Stratejik İşgücü Planlama", "İşgücü Maliyeti ve Verimlilik",
-        "Yedekleme ve Kariyer Planlama", "Yetenek Yönetimi", "Liderlik Gelişimi",
+        "Performans ve Değişken Ücret", "Stratejik İşgücü Planlaması", "İşgücü Maliyeti ve Verimlilik",
+        "Yedekleme ve Kariyer Planlaması", "Yetenek Yönetimi", "Liderlik Gelişimi",
         "Kültür ve Çalışan Bağlılığı", "Çeşitlilik ve Kapsayıcılık", "İşe Alım ve Erken Kariyer",
-        "İK Dijital Dönüşümü ve HRIS", "SAP ve SAP SuccessFactors", "İK Analitiği",
-        "İş Hukuku Uyumu", "Çok Lokasyonlu ve Mavi Yaka Yönetimi", "Değerlendirme ve Gelişim Merkezleri",
+        "İK'da Dijital Dönüşüm ve İKBS (HRIS)", "SAP ve SAP SuccessFactors", "İK Analitiği",
+        "İş Hukuku Uyumu", "Mavi Yaka İşgücü Yönetimi", "Değerlendirme ve Gelişim Merkezleri",
     ],
     education=[
-        ("**Orta Doğu Teknik Üniversitesi (ODTÜ)**, İşletme Lisans", "Ankara"),
+        ("**Orta Doğu Teknik Üniversitesi (ODTÜ)**, İşletme Bölümü (Lisans)", "Ankara"),
     ],
     details=[
-        ("Diller", "Türkçe (anadil)  ·  İngilizce (ileri)  ·  Almanca (iyi düzeyde)"),
-        ("Mobilite", "Çift vatandaşlık (TC ve AB); yurt içinde ve yurt dışında görev alabilirim"),
+        ("Diller", "Türkçe (ana dil)  ·  İngilizce (ileri)  ·  Almanca (iyi)"),
+        ("Görev Yeri", "Çift vatandaşlık (T.C. ve AB); yurt içinde ve yurt dışında görev alabilirim"),
     ],
     references=(getattr(_priv, "REFERENCES_TR", "") if _priv else "") or
                "Üst düzey referanslar (TED, Siemens) talep üzerine paylaşılır.",

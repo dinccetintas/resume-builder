@@ -120,9 +120,13 @@ class ExecutiveLayout:
         self._rich(text, x + BULLET_INDENT, w - BULLET_INDENT)
         self.pdf.set_y(self.pdf.get_y() + 0.9)
 
-    def heading(self, text: str) -> None:
-        """Letter-spaced navy section title followed by a hairline."""
-        self._ensure(20)  # never strand a heading: keep >=2 lines of content with it
+    def heading(self, text: str, keep: float = 20) -> None:
+        """Letter-spaced navy section title followed by a hairline.
+
+        `keep` (mm) is how much following content must fit on the same page,
+        so a heading is never stranded at a page foot.
+        """
+        self._ensure(keep)
         pdf = self.pdf
         pdf.ln(3.4)
         self._font("sans", "B", 9.6, NAVY)
@@ -338,7 +342,8 @@ class ExecutiveLayout:
             self.heading(r.heading("awards", "Awards & Recognition"))
             self.awards()
         if r.experience:
-            self.heading(r.heading("experience", "Professional Experience"))
+            # Heading + the first job's header block (see job(): 34 mm).
+            self.heading(r.heading("experience", "Professional Experience"), keep=44)
             for job in r.experience:
                 self.job(job)
         if r.approach:

@@ -171,6 +171,17 @@ def build_executive_docx(resume: Resume, path: str) -> None:
         for h in resume.highlights:
             bullet(h)
 
+    if resume.awards:
+        heading(resume.heading("awards", "Awards & Recognition"))
+        for year, text in resume.awards:
+            p = doc.add_paragraph()
+            _spacing(p, 0, 3)
+            y = p.add_run(year + "   ")
+            y.bold = True
+            y.font.name = "Cambria"
+            y.font.color.rgb = ACCENT
+            _rich(p, text)
+
     def job_block(job: Job, compact: bool = False) -> None:
         p = doc.add_paragraph(style="Heading 2")  # employer line
         _spacing(p, 4 if compact else 8, 0)
@@ -219,21 +230,15 @@ def build_executive_docx(resume: Resume, path: str) -> None:
         for job in resume.experience:
             job_block(job)
 
+    if resume.approach:
+        heading(resume.heading("approach", "Leadership Approach"))
+        for item in resume.approach:
+            bullet(item)
+
     if resume.earlier_career:
         heading(resume.heading("earlier", "Earlier Career"))
         for job in resume.earlier_career:
             job_block(job, compact=True)
-
-    if resume.awards:
-        heading(resume.heading("awards", "Awards & Recognition"))
-        for year, text in resume.awards:
-            p = doc.add_paragraph()
-            _spacing(p, 0, 3)
-            y = p.add_run(year + "   ")
-            y.bold = True
-            y.font.name = "Cambria"
-            y.font.color.rgb = ACCENT
-            _rich(p, text)
 
     if resume.competencies:
         heading(resume.heading("competencies", "Core Competencies"))

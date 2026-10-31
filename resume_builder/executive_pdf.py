@@ -252,7 +252,8 @@ class ExecutiveLayout:
 
     def job(self, job: Job, compact: bool = False) -> None:
         pdf = self.pdf
-        self._ensure(26 if job.bullets and not compact else 12)
+        # Keep company line + title + context + first bullet together.
+        self._ensure(34 if job.bullets and not compact else 12)
         pdf.ln(1.6 if compact else 2.4)
         y = pdf.get_y()
         # Line 1: company (serif) · location ............ dates
@@ -332,17 +333,21 @@ class ExecutiveLayout:
             self.heading(r.heading("highlights", "Signature Achievements"))
             for h in r.highlights:
                 self._bullet(h)
+        if r.awards:
+            self.heading(r.heading("awards", "Awards & Recognition"))
+            self.awards()
         if r.experience:
             self.heading(r.heading("experience", "Professional Experience"))
             for job in r.experience:
                 self.job(job)
+        if r.approach:
+            self.heading(r.heading("approach", "Leadership Approach"))
+            for item in r.approach:
+                self._bullet(item)
         if r.earlier_career:
             self.heading(r.heading("earlier", "Earlier Career"))
             for job in r.earlier_career:
                 self.job(job, compact=True)
-        if r.awards:
-            self.heading(r.heading("awards", "Awards & Recognition"))
-            self.awards()
         if r.competencies:
             self.heading(r.heading("competencies", "Core Competencies"))
             self.competencies()

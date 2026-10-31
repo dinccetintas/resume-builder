@@ -54,6 +54,8 @@ class Resume:
       earlier_career: condensed Jobs (title/company/dates + one line).
       details:      (label, text) rows, e.g. Languages, Citizenship.
       references:   one line.
+      approach:     "Leadership Approach" bullets: principle + proof from
+                    the career (vision, never unsupported claims).
       keywords:     embedded into PDF/DOCX metadata (search/ATS indexing).
       headings:     overrides for section titles, keyed by section id.
     """
@@ -81,6 +83,7 @@ class Resume:
     earlier_career: list[Job] = field(default_factory=list)
     details: list[tuple[str, str]] = field(default_factory=list)
     references: str = ""
+    approach: list[str] = field(default_factory=list)
     keywords: str = ""
     headings: dict[str, str] = field(default_factory=dict)
 

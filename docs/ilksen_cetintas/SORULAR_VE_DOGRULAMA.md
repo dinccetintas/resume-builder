@@ -48,10 +48,11 @@ Bağımsız değerlendirmede tüm panelistlerin ortak tespiti: **2019–2026 dö
 sistemler" ile dolu ama "sonuç rakamı" yok.** Aşağıdakilerden her biri, yaklaşık bir
 rakam ya da yön bile olsa, CV'yi bir üst lige taşır:
 
-1. **ŞA-RA halka arzı (Temmuz 2026).** İK olarak hangi işleri yürüttü? Yönetim kurulu
-   komiteleri, ücret politikası, SPK kurumsal yönetim uyumu, kilit personel elde tutma,
-   yönetici prim/teşvik planı, izahname için İK verileri... Bu, CEO ve YK'lar için en değerli
-   satır olur.
+1. ~~**ŞA-RA halka arzı (Temmuz 2026).** İK olarak hangi işleri yürüttü?~~ **Cevaplandı:**
+   şirketin halka arz aşamasına gelene kadarki kurumsallaşma çalışmalarını yürüttü. CV'ye
+   işlendi ("Prepared ŞA-RA for its IPO", "IPO 2026" rakamı). İsteğe bağlı ek detay: halka arz
+   sürecinde YK komiteleri, ücret politikası veya SPK kurumsal yönetim uyumu gibi somut İK
+   işleri varsa tek satırla daha da güçlendirilebilir.
 2. **Workforce Productivity & Planning Unit sonuçları.** Birim kurulduktan sonra ne değişti?
    Ton başına işçilik maliyeti, ton/çalışan, fazla mesai, taşeron oranı, üretime göre
    kadro: herhangi biri yeterli.

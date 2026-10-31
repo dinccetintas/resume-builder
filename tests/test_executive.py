@@ -65,7 +65,7 @@ def test_pdf_is_at_most_three_pages(built):
 
 def test_pdf_keeps_turkish_characters(built):
     text = _pdf_text(built[1][".pdf"])
-    for word in ("İlkşen Çetintaş", "ŞA-RA", "Türkiye", "TREDAŞ", "İçtaş"):
+    for word in ("İlkşen Çetintaş", "ŞA-RA", "Türkiye", "TREDAŞ", "İbrahim Çeçen"):
         assert word in text, word
 
 
@@ -79,8 +79,9 @@ def test_pdf_metric_value_and_label_extract_together(built):
 
 def test_pdf_section_order(built):
     text = _pdf_text(built[1][".pdf"])
-    order = ["EXECUTIVE PROFILE", "SIGNATURE ACHIEVEMENTS", "PROFESSIONAL EXPERIENCE",
-             "AWARDS & RECOGNITION", "CORE COMPETENCIES", "EDUCATION"]
+    order = ["EXECUTIVE PROFILE", "SIGNATURE ACHIEVEMENTS", "AWARDS & RECOGNITION",
+             "PROFESSIONAL EXPERIENCE", "LEADERSHIP APPROACH", "CORE COMPETENCIES",
+             "EDUCATION"]
     positions = [text.index(h) for h in order]
     assert positions == sorted(positions)
 

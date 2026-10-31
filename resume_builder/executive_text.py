@@ -35,19 +35,22 @@ def _sections(r: Resume) -> list[tuple[str, list[str]]]:
     if r.highlights:
         out.append((r.heading("highlights", "Signature Achievements"),
                     [f"- {h}" for h in r.highlights]))
+    if r.awards:
+        out.append((r.heading("awards", "Awards & Recognition"),
+                    [f"- {y}: {t}" for y, t in r.awards]))
     if r.experience:
         lines: list[str] = []
         for job in r.experience:
             lines += job_lines(job)
         out.append((r.heading("experience", "Professional Experience"), lines))
+    if r.approach:
+        out.append((r.heading("approach", "Leadership Approach"),
+                    [f"- {a}" for a in r.approach]))
     if r.earlier_career:
         lines = []
         for job in r.earlier_career:
             lines += job_lines(job, compact=True)
         out.append((r.heading("earlier", "Earlier Career"), lines))
-    if r.awards:
-        out.append((r.heading("awards", "Awards & Recognition"),
-                    [f"- {y}: {t}" for y, t in r.awards]))
     if r.competencies:
         out.append((r.heading("competencies", "Core Competencies"),
                     [" · ".join(r.competencies)]))

@@ -154,8 +154,8 @@ Built for the İlkşen Çetintaş CHRO CV; the research behind each rule is in
   target title, a one-line positioning tagline, then a **key-numbers band**
   of 4 defensible figures. The current role must start on page 1.
 - **Section order:** Executive Profile (≤5 lines) → Signature Achievements
-  (5–6 bullets with bold lead-ins) → Professional Experience → Earlier
-  Career → Awards → Core Competencies → Education → Additional Information.
+  (5 bullets with bold lead-ins) → Awards & Recognition (on page 1: proof
+  next to the claims) → Professional Experience → Core Competencies → Education → Additional Information.
 - **Every employer gets a context line** (sector, scale, notable status:
   "11 factories, projects in 120+ countries; listed on Borsa İstanbul").
   Search partners read company calibre before role content.

@@ -93,7 +93,25 @@ pay-adjustment cost), her HR work on the IPO, union and labor-relations
 record, team size and reporting line, and the 2006–2009 gap. See
 `SORULAR_VE_DOGRULAMA.md` (in Turkish, for the candidate).
 
-## 6. Automated checks (`tests/test_executive.py`)
+## 6. Round 3: client feedback (photo version is now the primary CV)
+
+- **IPO role confirmed by the client:** she led ŞA-RA's institutionalization up
+  to the IPO stage. That is now the lead Signature Achievement and an "IPO 2026"
+  key figure, which closes the panel's biggest content gap.
+- **Awards moved to page 1**, right after Signature Achievements, so the proof
+  sits next to the claims.
+- **Strategic bolding:** 1–2 key results per bullet (numbers, IPO, EBRD, Board)
+  to guide the eye in an F-pattern scan.
+- **Plainer language:** shorter sentences and everyday words; lead-ins say what
+  happened ("Prepared ŞA-RA for its IPO", "One fair pay system for ~5,000
+  employees").
+- **Vision:** a one-sentence guiding belief in the profile, plus a "Leadership
+  Approach" section on page 3 where every principle is paired with its proof
+  from her career.
+- **Photo:** upscaled locally from 125 px to 500 px (Lanczos + light sharpening);
+  a new professional headshot is still recommended.
+
+## 7. Automated checks (`tests/test_executive.py`)
 
 - Turkish characters survive PDF text extraction (İlkşen, ŞA-RA, TREDAŞ, İçtaş).
 - Each key figure is extracted on the same line as its label.

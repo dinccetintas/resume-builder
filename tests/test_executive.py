@@ -121,3 +121,19 @@ def test_photo_variant_built_when_photo_exists(tmp_path):
 def test_classic_theme_still_builds(tmp_path):
     paths = build_all(_load("candidates/dinc_cetintas.py"), str(tmp_path))
     assert sorted(os.path.splitext(p)[1] for p in paths) == [".docx", ".md", ".pdf"]
+
+
+def test_turkish_edition_uppercases_correctly_and_fits(tmp_path):
+    from resume_builder.markup import upper
+
+    assert upper("Yönetici Profili", "tr") == "YÖNETİCİ PROFİLİ"
+    assert upper("profile", "en") == "PROFILE"
+    paths = build_all(_load("candidates/ilksen_cetintas_tr.py", public=True), str(tmp_path))
+    pdf = next(p for p in paths if p.endswith("_TR.pdf"))
+    text = _pdf_text(pdf)
+    for heading in ("YÖNETİCİ PROFİLİ", "ÖNE ÇIKAN BAŞARILAR", "ÖDÜLLER VE TAKDİRLER",
+                    "PROFESYONEL DENEYİM"):
+        assert heading in text, heading
+    assert "YÖNETICI" not in text  # the English-rules uppercase bug
+    assert len(PdfReader(pdf).pages) <= 3
+    assert "+90" not in text

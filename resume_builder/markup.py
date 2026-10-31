@@ -32,3 +32,17 @@ def segments(text: str) -> list[tuple[str, bool]]:
 def plain(text: str) -> str:
     """`text` with all markup removed (for plain-text / ATS output)."""
     return _BOLD.sub(r"\1", text)
+
+
+def upper(text: str, lang: str = "en") -> str:
+    """Uppercase `text` correctly for `lang`.
+
+    Python's str.upper() maps Turkish "i" to "I" (should be "İ"), so a
+    Turkish heading like "Yönetici Profili" would print "YÖNETICI PROFILI".
+
+    >>> upper("Yönetici Profili", "tr")
+    'YÖNETİCİ PROFİLİ'
+    """
+    if lang == "tr":
+        text = text.replace("i", "İ").replace("ı", "I")
+    return text.upper()

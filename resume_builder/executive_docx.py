@@ -17,7 +17,7 @@ import datetime as _dt
 
 from docx.shared import Mm, Pt, RGBColor
 
-from .markup import segments
+from .markup import segments, upper
 from .render import _add_bottom_border, _add_hyperlink, _set_char_spacing
 from .schema import Job, Resume
 
@@ -56,6 +56,9 @@ def build_executive_docx(resume: Resume, path: str) -> None:
         rpr.append(fonts)
     for attr in ("w:ascii", "w:hAnsi", "w:cs", "w:eastAsia"):
         fonts.set(qn(attr), "Calibri")
+    lang_el = OxmlElement("w:lang")  # spell-check / hyphenation language
+    lang_el.set(qn("w:val"), {"tr": "tr-TR"}.get(resume.lang, "en-US"))
+    rpr.append(lang_el)
 
     props = doc.core_properties
     now = _dt.datetime.now(_dt.timezone.utc).replace(microsecond=0, tzinfo=None)
@@ -85,7 +88,7 @@ def build_executive_docx(resume: Resume, path: str) -> None:
     def heading(text: str) -> None:
         # Real "Heading 1" style so parsers detect section boundaries.
         p = doc.add_paragraph(style="Heading 1")
-        run = p.add_run(text.upper())
+        run = p.add_run(upper(text, resume.lang))
         run.bold = True
         run.font.size = Pt(10.5)
         run.font.color.rgb = NAVY
@@ -108,8 +111,12 @@ def build_executive_docx(resume: Resume, path: str) -> None:
     _spacing(p, 0, 1)
 
     p = doc.add_paragraph()
-    run = p.add_run(resume.role)
-    run.font.all_caps = True  # visual caps; parsers still read mixed case
+    if resume.lang == "tr":
+        # Word's all-caps uses English rules (i -> I), so write Turkish caps.
+        run = p.add_run(upper(resume.role, "tr"))
+    else:
+        run = p.add_run(resume.role)
+        run.font.all_caps = True  # visual caps; parsers still read mixed case
     run.bold = True
     run.font.size = Pt(10)
     run.font.color.rgb = ACCENT

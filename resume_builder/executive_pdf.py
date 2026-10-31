@@ -18,6 +18,7 @@ import os
 
 from fpdf import FPDF
 
+from .markup import upper
 from .schema import Job, Resume
 
 FONT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts")
@@ -72,7 +73,7 @@ class ExecutiveLayout:
         pdf.set_margins(MARGIN_X, MARGIN_TOP, MARGIN_X)
         pdf.set_auto_page_break(auto=True, margin=MARGIN_BOTTOM)
         pdf.alias_nb_pages()
-        pdf.set_lang("en")
+        pdf.set_lang(resume.lang)
         pdf.set_title(f"{resume.name} — {resume.role}")
         pdf.set_author(resume.name)
         pdf.set_subject(f"Curriculum Vitae — {resume.role}")
@@ -126,7 +127,7 @@ class ExecutiveLayout:
         pdf.ln(3.4)
         self._font("sans", "B", 9.6, NAVY)
         pdf.set_char_spacing(1.4)
-        label = text.upper()
+        label = upper(text, self.r.lang)
         tw = pdf.get_string_width(label)
         y = pdf.get_y()
         pdf.set_x(MARGIN_X)
@@ -160,7 +161,7 @@ class ExecutiveLayout:
         pdf.set_x(x)
         self._font("sans", "B", 9.8, ACCENT)
         pdf.set_char_spacing(1.5)
-        pdf.cell(w, 5.6, r.role.upper(), new_x="LMARGIN", new_y="NEXT")
+        pdf.cell(w, 5.6, upper(r.role, r.lang), new_x="LMARGIN", new_y="NEXT")
         pdf.set_char_spacing(0)
 
         if r.tagline:

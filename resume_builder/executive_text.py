@@ -7,7 +7,7 @@ Both follow the same section order as the PDF/DOCX.
 """
 from __future__ import annotations
 
-from .markup import plain
+from .markup import plain, upper
 from .schema import Job, Resume
 
 
@@ -75,7 +75,7 @@ def build_executive_md(r: Resume, path: str) -> None:
     if r.metrics:
         lines += ["", " | ".join(f"**{v}** {lab}" for v, lab in r.metrics)]
     for head, body in _sections(r):
-        lines += ["", f"## {head.upper()}", *body]
+        lines += ["", f"## {upper(head, r.lang)}", *body]
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines).rstrip() + "\n")
 
@@ -90,7 +90,7 @@ def build_executive_txt(r: Resume, path: str) -> None:
     if r.metrics:
         lines += ["", " | ".join(f"{v} {lab}" for v, lab in r.metrics)]
     for head, body in _sections(r):
-        lines += ["", head.upper()]
+        lines += ["", upper(head, r.lang)]
         lines += [plain(line).replace("_", "") if line.startswith("_") else plain(line)
                   for line in body]
     with open(path, "w", encoding="utf-8") as f:

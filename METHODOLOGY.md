@@ -174,3 +174,6 @@ Built for the İlkşen Çetintaş CHRO CV; the research behind each rule is in
 - **Privacy:** this repo is public. Put phone, e-mail, photo and reference
   contacts in `candidates/private/` (git-ignored); `RESUME_PUBLIC=1` builds a
   redacted copy that is safe to commit.
+- **Other languages:** set `lang` (e.g. `"tr"`) and translate `headings`.
+  Uppercasing is locale-aware: Python's `str.upper()` turns Turkish "i" into
+  "I", which would print "YÖNETICI" instead of "YÖNETİCİ".

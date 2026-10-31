@@ -55,6 +55,10 @@ python build_cv.py candidates/ilksen_cetintas.py --out out/private   # full, wit
 RESUME_PUBLIC=1 python build_cv.py candidates/ilksen_cetintas.py      # redacted, safe to commit
 ```
 
+A Turkish edition lives in `candidates/ilksen_cetintas_tr.py`. Set
+`lang="tr"` and Turkish uppercasing (İ/ı) and document language tags are
+handled for you; section titles come from `headings`.
+
 Outputs: `<basename>.pdf` (master), `<basename>_photo.pdf` (if a photo is
 set), `.docx` (ATS upload), `.md`, `.txt` (paste-in forms). Private data
 (phone, e-mail, photo, reference contacts) lives in the git-ignored
@@ -85,6 +89,7 @@ candidates/
   TEMPLATE.py               Blank, annotated starting point
   dinc_cetintas.py          A complete, worked example (the AI-Engineer CV)
   ilksen_cetintas.py        Executive example (CHRO CV, executive theme)
+  ilksen_cetintas_tr.py     Its Turkish edition (lang="tr")
   private/                  git-ignored contact data / photos
 docs/ilksen_cetintas/       research, persona reviews, scorecard, open questions
 tests/                      pytest regression tests

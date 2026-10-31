@@ -74,6 +74,7 @@ class Resume:
 
     # --- executive theme ----------------------------------------------------
     theme: str = "classic"
+    lang: str = "en"            # "en" | "tr": PDF/DOCX language tag + correct uppercasing
     tagline: str = ""
     photo: str = ""
     metrics: list[tuple[str, str]] = field(default_factory=list)

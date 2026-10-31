@@ -142,3 +142,35 @@ Before calling a résumé done, check each bullet:
 - [ ] Every number and capability confirmed and defensible?
 - [ ] No buzzword repeated past its first, earned mention?
 - [ ] ~2 pages, scans in 20 seconds?
+
+---
+
+## 9. Executive / C-suite CVs (the `executive` theme)
+
+Built for the İlkşen Çetintaş CHRO CV; the research behind each rule is in
+[`docs/ilksen_cetintas/RESEARCH_AND_SCORECARD.md`](docs/ilksen_cetintas/RESEARCH_AND_SCORECARD.md).
+
+- **Page 1, top third, sells in ~7 seconds** (Ladders eye-tracking): name,
+  target title, a one-line positioning tagline, then a **key-numbers band**
+  of 4 defensible figures. The current role must start on page 1.
+- **Section order:** Executive Profile (≤5 lines) → Signature Achievements
+  (5–6 bullets with bold lead-ins) → Professional Experience → Earlier
+  Career → Awards → Core Competencies → Education → Additional Information.
+- **Every employer gets a context line** (sector, scale, notable status:
+  "11 factories, projects in 120+ countries; listed on Borsa İstanbul").
+  Search partners read company calibre before role content.
+- **Business language over HR process:** lead-ins name the outcome
+  (*Workforce productivity*, *Reward architecture*), the bullet gives the
+  mechanism.
+- **Full chronology, condensed early career.** Exec search wants every role
+  and explained gaps; keep strong early brands (TAI, Siemens) visible but
+  short. Avoid stating "38 years" (age bias); let the brands carry tenure.
+- **Award credibility ladder:** institutional awards (EBRD) outrank
+  commercial event awards; name organisers exactly as they appear publicly.
+- **Length:** 3 pages maximum; page 1 must stand alone.
+- **Files:** `*.pdf` (master, no photo) for e-mail and international roles,
+  `*_photo.pdf` for Türkiye/Gulf/DACH direct applications, `*.docx` for ATS
+  portals (never the photo version), `*.txt` for paste-in forms.
+- **Privacy:** this repo is public. Put phone, e-mail, photo and reference
+  contacts in `candidates/private/` (git-ignored); `RESUME_PUBLIC=1` builds a
+  redacted copy that is safe to commit.

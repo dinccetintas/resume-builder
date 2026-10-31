@@ -366,8 +366,15 @@ def build_md(resume: Resume, path: str) -> None:
 
 
 def build_all(resume: Resume, out_dir: str) -> list[str]:
-    """Render DOCX + PDF + MD into out_dir; return the paths written."""
+    """Render every format for `resume` into out_dir; return the paths written.
+
+    classic:   DOCX + PDF + MD.
+    executive: PDF (no photo, the master), PDF with photo (only if
+               `resume.photo` exists), ATS DOCX, MD and plain-text TXT.
+    """
     os.makedirs(out_dir, exist_ok=True)
+    if resume.theme == "executive":
+        return _build_executive(resume, out_dir)
     docx_path = os.path.join(out_dir, resume.basename + ".docx")
     pdf_path = os.path.join(out_dir, resume.basename + ".pdf")
     md_path = os.path.join(out_dir, resume.basename + ".md")
@@ -375,3 +382,22 @@ def build_all(resume: Resume, out_dir: str) -> list[str]:
     build_pdf(resume, pdf_path)
     build_md(resume, md_path)
     return [docx_path, pdf_path, md_path]
+
+
+def _build_executive(resume: Resume, out_dir: str) -> list[str]:
+    """Executive-theme outputs (imported lazily: those modules import this one)."""
+    from .executive_docx import build_executive_docx
+    from .executive_pdf import build_executive_pdf
+    from .executive_text import build_executive_md, build_executive_txt
+
+    stem = os.path.join(out_dir, resume.basename)
+    paths = [stem + ".pdf", stem + ".docx", stem + ".md", stem + ".txt"]
+    build_executive_pdf(resume, paths[0], with_photo=False)
+    build_executive_docx(resume, paths[1])
+    build_executive_md(resume, paths[2])
+    build_executive_txt(resume, paths[3])
+    if resume.photo and os.path.exists(resume.photo):
+        photo_pdf = stem + "_photo.pdf"
+        build_executive_pdf(resume, photo_pdf, with_photo=True)
+        paths.append(photo_pdf)
+    return paths

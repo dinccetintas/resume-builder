@@ -1,3 +1,4 @@
 python-docx>=1.1
 fpdf2>=2.7
 pypdf>=4.0        # optional, used only for verifying generated PDFs
+pytest>=8.0      # tests/ (python -m pytest -q)

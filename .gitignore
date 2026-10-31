@@ -7,3 +7,8 @@ venv/
 
 # OS
 .DS_Store
+
+# Private candidate data (contact details, photos, reference phone numbers).
+# The repository is public: keep personal identifiers out of git.
+candidates/private/
+out/private/

@@ -62,6 +62,11 @@ HR Director · Executive Committee Member
 _Five-star hotel of the Swissôtel Hotels & Resorts brand._
 - Led talent development and change programs as a member of the hotel's **Executive Committee**.
 
+**IC İçtaş Construction (IC İçtaş İnşaat)** | 2006 – 2009
+Human Resources Director
+_Construction and infrastructure company of IC Holding._
+- Led **strategic HR** for the Group's construction company; later **returned to the IC Group** as Deputy General Manager, Human Resources (2013–2019).
+
 **Siemens Communications, Türkiye** | 1996 – 2006
 Group Human Resources Manager
 _Siemens Industries Inc.: Siemens' telecommunications business in Türkiye (carrier networks, enterprise networks, mobile devices)._
@@ -92,6 +97,4 @@ People & HR Strategy · HR Operating Model Design · Organizational Effectivenes
 ## ADDITIONAL INFORMATION
 - **Languages:** Turkish (native)  ·  English (advanced)  ·  German (good working proficiency)
 - **Mobility:** Dual Turkish & EU citizen; open to relocation within Türkiye and internationally
-
-## REFERENCES
-Senior references (TED, Siemens) available on request.
+- **References:** Senior references (TED, Siemens) available on request.

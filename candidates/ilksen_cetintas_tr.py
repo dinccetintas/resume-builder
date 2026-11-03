@@ -179,6 +179,17 @@ RESUME = Resume(
             ],
         ),
         Job(
+            company="IC İçtaş İnşaat",
+            location="",
+            title="İnsan Kaynakları Direktörü",
+            dates="2006 – 2009",
+            context="IC Holding'in inşaat ve altyapı şirketi.",
+            bullets=[
+                "Grubun inşaat şirketinde **stratejik İK** fonksiyonunu yönettim; 2013'te İK'dan Sorumlu "
+                "Genel Müdür Yardımcısı olarak **IC Grubuna geri döndüm** (2013–2019).",
+            ],
+        ),
+        Job(
             company="Siemens Communications, Türkiye",
             location="",
             title="Grup İnsan Kaynakları Müdürü",
@@ -239,9 +250,9 @@ RESUME = Resume(
     details=[
         ("Diller", "Türkçe (ana dil)  ·  İngilizce (ileri)  ·  Almanca (iyi)"),
         ("Görev Yeri", "Çift vatandaşlık (T.C. ve AB); yurt içinde ve yurt dışında görev alabilirim"),
+        ("Referanslar", (getattr(_priv, "REFERENCES_TR", "") if _priv else "")
+                    or "Üst düzey referanslar (TED, Siemens) talep üzerine paylaşılır."),
     ],
-    references=(getattr(_priv, "REFERENCES_TR", "") if _priv else "") or
-               "Üst düzey referanslar (TED, Siemens) talep üzerine paylaşılır.",
     keywords=("CHRO, İnsan Kaynakları, İK Direktörü, İcra Kurulu, Yönetim Kurulu, kurumsallaşma, "
               "halka arz, ücret yönetimi, iş değerlemesi, Hay, performans yönetimi, değişken ücret, "
               "işgücü planlama, verimlilik, yedekleme, liderlik gelişimi, SAP SuccessFactors"),

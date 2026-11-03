@@ -187,6 +187,17 @@ RESUME = Resume(
             ],
         ),
         Job(
+            company="IC İçtaş Construction (IC İçtaş İnşaat)",
+            location="",
+            title="Human Resources Director",
+            dates="2006 – 2009",
+            context="Construction and infrastructure company of IC Holding.",
+            bullets=[
+                "Led **strategic HR** for the Group's construction company; later **returned to the "
+                "IC Group** as Deputy General Manager, Human Resources (2013–2019).",
+            ],
+        ),
+        Job(
             company="Siemens Communications, Türkiye",
             location="",
             title="Group Human Resources Manager",
@@ -245,9 +256,9 @@ RESUME = Resume(
     details=[
         ("Languages", "Turkish (native)  ·  English (advanced)  ·  German (good working proficiency)"),
         ("Mobility", "Dual Turkish & EU citizen; open to relocation within Türkiye and internationally"),
+        ("References", (getattr(_priv, "REFERENCES", "") if _priv else "")
+                    or "Senior references (TED, Siemens) available on request."),
     ],
-    references=(getattr(_priv, "REFERENCES", "") if _priv else "") or
-               "Senior references (TED, Siemens) available on request.",
     keywords=("CHRO, Chief Human Resources Officer, Executive Committee, Board partner, HR strategy, organizational transformation, "
               "reward, job evaluation, Hay, CRG, salary structure, pay equity, performance management, "
               "variable pay, workforce planning, productivity, succession, leadership development, "

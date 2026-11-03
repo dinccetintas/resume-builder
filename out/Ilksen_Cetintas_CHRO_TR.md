@@ -62,6 +62,11 @@ _Türk Eğitim Derneğinin (TED) kurduğu, 2012'de eğitime başlayan vakıf ün
 _Swissôtel Hotels & Resorts markasının beş yıldızlı oteli._
 - Otelin **İcra Kurulu** üyesi olarak yetenek gelişimi ve değişim programlarını yönettim.
 
+**IC İçtaş İnşaat** | 2006 – 2009
+İnsan Kaynakları Direktörü
+_IC Holding'in inşaat ve altyapı şirketi._
+- Grubun inşaat şirketinde **stratejik İK** fonksiyonunu yönettim; 2013'te İK'dan Sorumlu Genel Müdür Yardımcısı olarak **IC Grubuna geri döndüm** (2013–2019).
+
 **Siemens Communications, Türkiye** | 1996 – 2006
 Grup İnsan Kaynakları Müdürü
 _Siemens Industries Inc.: Siemens'in Türkiye'deki telekomünikasyon iş birimi (operatör altyapısı, kurumsal ağlar, mobil cihazlar)._
@@ -92,6 +97,4 @@ _Türkiye'nin ulusal havacılık ve uzay şirketi; 1984'te F-16 ortak üretimi i
 ## EK BİLGİLER
 - **Diller:** Türkçe (ana dil)  ·  İngilizce (ileri)  ·  Almanca (iyi)
 - **Görev Yeri:** Çift vatandaşlık (T.C. ve AB); yurt içinde ve yurt dışında görev alabilirim
-
-## REFERANSLAR
-Üst düzey referanslar (TED, Siemens) talep üzerine paylaşılır.
+- **Referanslar:** Üst düzey referanslar (TED, Siemens) talep üzerine paylaşılır.

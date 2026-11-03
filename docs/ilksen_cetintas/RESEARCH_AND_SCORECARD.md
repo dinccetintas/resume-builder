@@ -26,7 +26,7 @@ context and award verification only**.
 | 2018 Ministry of Energy & Natural Resources award, "top three businesswomen in mining and energy" | Programme is "Türkiye'ye Enerji Veren Kadınlar" (Women Energizing Türkiye), first edition 6 Mar 2018. Published category winners do not include her; no finalist list is public | Kept her wording, official programme name added. **Confirm whether this was a top-3 finalist selection and in which category; adjust to "finalist" if so.** |
 | "IC Investment Holding" | Legal name is IC İbrahim Çeçen Yatırım Holding | Shown as "IC Holding (IC İbrahim Çeçen Yatırım Holding)". |
 | ~2,000 employees at ŞA-RA | IPO materials say "2,000+"; Kariyer.net shows 1,000–1,499 | Kept "~2,000" (her figure; matches the prospectus). |
-| 2006–2009 | No role listed | **Gap must be explained** (search firms read gaps as unemployment). Add a one-line entry (consulting, sabbatical, relocation…). |
+| 2006–2009 | No role listed in the original CV | ✅ **Resolved:** IC İçtaş Construction, HR Director 2006–2009 (from her LinkedIn). Added; also shows she later returned to the IC Group at Deputy GM level. |
 
 ## 3. Executive-CV best practice (evidence base)
 
@@ -90,7 +90,7 @@ The search-partner pass scored the original ~42 and the first draft ~67.
 remaining 10–12 points need information only she can provide: outcome
 numbers for 2019–2026 (labor cost per ton, attrition, succession coverage,
 pay-adjustment cost), her HR work on the IPO, union and labor-relations
-record, team size and reporting line, and the 2006–2009 gap. See
+record, and team size and reporting line. See
 `SORULAR_VE_DOGRULAMA.md` (in Turkish, for the candidate).
 
 ## 6. Round 3: client feedback (photo version is now the primary CV)

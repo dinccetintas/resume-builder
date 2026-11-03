@@ -11,10 +11,10 @@ Aşağıdaki listeyi kendisine iletip cevaplarını aldığımızda CV'yi tek ko
 
 ## A. Göndermeden önce MUTLAKA teyit edilmesi gerekenler (risk)
 
-1. **2006–2009 arası boşluk.** Siemens (2006'ya kadar) ile Swissôtel (2009'dan itibaren)
-   arasında 3 yıl CV'de görünmüyor. Executive search firmaları açıklanmamış boşluğu
-   "işsizlik" olarak okur. Bu dönemde ne yapıldı? (danışmanlık, proje, eğitim, yurt dışı,
-   aile vb.) Tek satır yeterli.
+1. ~~**2006–2009 arası boşluk.**~~ **Çözüldü:** IC İçtaş İnşaat, İnsan Kaynakları Direktörü
+   (2006–2009; LinkedIn kaydından). CV'ye eklendi ve 2013'te IC Grubuna Genel Müdür Yardımcısı
+   olarak geri dönüşü vurgulandı. İsteğe bağlı: bu dönemden somut bir başarı (çalışan sayısı,
+   kurulan sistem, proje) varsa tek madde eklenebilir.
 2. **2018 Enerji ve Tabii Kaynaklar Bakanlığı ödülü.** Bakanlığın 2018 programı
    "Türkiye'ye Enerji Veren Kadınlar" olarak geçiyor ve yayımlanan kazananlar arasında
    adı yok. "En başarılı ilk üç iş kadını" ifadesi **finalist / ilk 3'e seçilme** anlamında

@@ -1,10 +1,10 @@
 # DINC CETINTAS
 **Senior AI Engineer**
 
-EU Citizen · open to Abu Dhabi · [dinccetintas24@gmail.com](mailto:dinccetintas24@gmail.com) · +974 51444964 · [LinkedIn](https://www.linkedin.com/in/dinc-cetintas-79a04b205/) · [GitHub](https://github.com/dinccetintas)
+EU Citizen, Cyprus · [dinccetintas24@gmail.com](mailto:dinccetintas24@gmail.com) · +974 51444964 · [LinkedIn](https://www.linkedin.com/in/dinc-cetintas-79a04b205/) · [GitHub](https://github.com/dinccetintas)
 
 ## PROFILE
-Senior AI Engineer who delivers end-to-end AI use cases in regulated financial services — client onboarding, KYC/document intelligence, and customer-journey automation. I build, deploy, and continuously refine production ML models and intelligent workflows that simplify customer interactions and automate onboarding, integrating them into live banking systems with clean, maintainable Python. I partner with product managers and data specialists across agile squads to turn business concepts into shipped technical designs, and I monitor model performance in production and iterate. EU citizen, available for a 12-month engagement in Abu Dhabi.
+Senior AI Engineer who delivers end-to-end AI use cases in regulated financial services — client onboarding, KYC/document intelligence, and customer-journey automation. I build, deploy, and continuously refine production ML models and intelligent workflows that simplify customer interactions and automate onboarding, integrating them into live banking systems with clean, maintainable Python. I partner with product managers and data specialists across agile squads to turn business concepts into shipped technical designs, and I monitor model performance in production and iterate.
 
 ## PROFESSIONAL EXPERIENCE
 
@@ -52,4 +52,4 @@ Senior AI Engineer who delivers end-to-end AI use cases in regulated financial s
 Operationalizing LLMs on Azure (Duke) · Generative AI Applications with RAG & LangChain (IBM) · AI Agents (IBM) · Generative AI Techniques & Applications (Duke) · Machine Learning Specialization (Stanford) · TensorFlow in AI/ML/DL (DeepLearning.AI) · Visa Data Science Bootcamp
 
 ## ADDITIONAL
-Languages: English (professional) · Availability: open to a 12-month engagement in Abu Dhabi (visa sponsored by employer)
+Languages: English (professional)

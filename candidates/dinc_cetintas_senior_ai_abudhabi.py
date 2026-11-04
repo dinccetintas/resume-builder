@@ -15,7 +15,7 @@ RESUME = Resume(
     name="DINC CETINTAS",
     role="Senior AI Engineer",
     contact_segments=[
-        ("EU Citizen · open to Abu Dhabi", None),
+        ("EU Citizen, Cyprus", None),
         (EMAIL, "mailto:" + EMAIL),
         ("+974 51444964", None),
         ("LinkedIn", "https://www.linkedin.com/in/dinc-cetintas-79a04b205/"),
@@ -29,7 +29,7 @@ RESUME = Resume(
         "integrating them into live banking systems with clean, maintainable Python. I partner "
         "with product managers and data specialists across agile squads to turn business "
         "concepts into shipped technical designs, and I monitor model performance in production "
-        "and iterate. EU citizen, available for a 12-month engagement in Abu Dhabi."
+        "and iterate."
     ),
     experience=[
         Job(
@@ -131,9 +131,6 @@ RESUME = Resume(
         "Learning Specialization (Stanford) · TensorFlow in AI/ML/DL (DeepLearning.AI) · Visa "
         "Data Science Bootcamp"
     ),
-    additional=(
-        "Languages: English (professional) · Availability: open to a 12-month engagement in "
-        "Abu Dhabi (visa sponsored by employer)"
-    ),
+    additional="Languages: English (professional)",
     basename="Dinc_Cetintas_Senior_AI_Engineer",
 )

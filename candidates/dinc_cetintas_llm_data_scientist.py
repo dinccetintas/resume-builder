@@ -16,7 +16,7 @@ EMAIL = "dinccetintas24@gmail.com"
 
 RESUME = Resume(
     name="DINC CETINTAS",
-    role="Senior AI Engineer",
+    role="Senior LLM Data Scientist",
     contact_segments=[
         ("EU Citizen, Cyprus", None),
         (EMAIL, "mailto:" + EMAIL),
@@ -25,7 +25,7 @@ RESUME = Resume(
         ("GitHub", "https://github.com/dinccetintas"),
     ],
     profile=(
-        "Senior AI Engineer with hands-on experience in LLM fine-tuning, evaluation, and "
+        "Senior LLM Data Scientist with hands-on experience in LLM fine-tuning, evaluation, and "
         "data-pipeline engineering in regulated financial environments. I turn raw, unstructured "
         "enterprise data into training- and retrieval-ready datasets (cleaning, filtering, "
         "deduplication), fine-tune and evaluate transformer models (GPT, T5, BERT), and build "
@@ -36,7 +36,7 @@ RESUME = Resume(
     ),
     experience=[
         Job(
-            title="Senior AI Engineer / AI Engineer — Commercial Bank of Qatar, Doha",
+            title="LLM Data Scientist / AI Engineer — Commercial Bank of Qatar, Doha",
             dates="Jan 2024 – Present",
             bullets=[
                 "Built data pipelines that turn raw, unstructured enterprise data into training- "
@@ -115,7 +115,7 @@ RESUME = Resume(
     ],
     selected_systems=[
         ("Enterprise RAG Platform", "hybrid retrieval + reranking over 900+ docs on a vector DB; 87% source-linked accuracy"),
-        ("Enterprise Data → Training/Retrieval Pipelines", "cleaning, filtering, deduplication & structured extraction into model-ready datasets"),
+        ("Enterprise Data Pipelines (Training & Retrieval)", "cleaning, filtering, deduplication & structured extraction into model-ready datasets"),
         ("Model Evaluation Framework", "retrieval-quality, grounding & hallucination benchmarks; human review; release gating"),
         ("Credit Risk & Financial-Analysis LLM Workflows", "tool calling + LLM reasoning + schema-validated, analyst-ready reports"),
         ("Real-Time Fraud-Detection Model", "ROC-AUC 0.93; engineered features, evaluation, monitoring"),

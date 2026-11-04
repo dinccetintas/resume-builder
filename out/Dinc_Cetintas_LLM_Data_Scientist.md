@@ -1,14 +1,14 @@
 # DINC CETINTAS
-**Senior AI Engineer**
+**Senior LLM Data Scientist**
 
 EU Citizen, Cyprus · [dinccetintas24@gmail.com](mailto:dinccetintas24@gmail.com) · +974 51444964 · [LinkedIn](https://www.linkedin.com/in/dinc-cetintas-79a04b205/) · [GitHub](https://github.com/dinccetintas)
 
 ## PROFILE
-Senior AI Engineer with hands-on experience in LLM fine-tuning, evaluation, and data-pipeline engineering in regulated financial environments. I turn raw, unstructured enterprise data into training- and retrieval-ready datasets (cleaning, filtering, deduplication), fine-tune and evaluate transformer models (GPT, T5, BERT), and build RAG systems over vector databases — all in Python. I partner closely with product and data teams to translate requirements into working technical designs, take strong ownership of outcomes, and explain complex trade-offs clearly to executives and engineers alike.
+Senior LLM Data Scientist with hands-on experience in LLM fine-tuning, evaluation, and data-pipeline engineering in regulated financial environments. I turn raw, unstructured enterprise data into training- and retrieval-ready datasets (cleaning, filtering, deduplication), fine-tune and evaluate transformer models (GPT, T5, BERT), and build RAG systems over vector databases — all in Python. I partner closely with product and data teams to translate requirements into working technical designs, take strong ownership of outcomes, and explain complex trade-offs clearly to executives and engineers alike.
 
 ## PROFESSIONAL EXPERIENCE
 
-**Senior AI Engineer / AI Engineer — Commercial Bank of Qatar, Doha** · Jan 2024 – Present
+**LLM Data Scientist / AI Engineer — Commercial Bank of Qatar, Doha** · Jan 2024 – Present
 - Built data pipelines that turn raw, unstructured enterprise data into training- and retrieval-ready datasets — cleaning, filtering, deduplication, and structured extraction across 900+ compliance and financial documents.
 - Fine-tuned and evaluated transformer models (GPT, T5, BERT), refining datasets and prompts against automated quality benchmarks (retrieval quality, grounding, hallucination) with human review loops before every release.
 - Designed RAG systems over vector databases — hybrid BM25 + vector retrieval, reranking, citation grounding, and context engineering (tokenization-aware chunking and context-window budgeting) — reaching 87% source-linked accuracy over 900+ documents.
@@ -41,7 +41,7 @@ Senior AI Engineer with hands-on experience in LLM fine-tuning, evaluation, and 
 
 ## SELECTED AI SYSTEMS
 - **Enterprise RAG Platform** — hybrid retrieval + reranking over 900+ docs on a vector DB; 87% source-linked accuracy
-- **Enterprise Data → Training/Retrieval Pipelines** — cleaning, filtering, deduplication & structured extraction into model-ready datasets
+- **Enterprise Data Pipelines (Training & Retrieval)** — cleaning, filtering, deduplication & structured extraction into model-ready datasets
 - **Model Evaluation Framework** — retrieval-quality, grounding & hallucination benchmarks; human review; release gating
 - **Credit Risk & Financial-Analysis LLM Workflows** — tool calling + LLM reasoning + schema-validated, analyst-ready reports
 - **Real-Time Fraud-Detection Model** — ROC-AUC 0.93; engineered features, evaluation, monitoring
